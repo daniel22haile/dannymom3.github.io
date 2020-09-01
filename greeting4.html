@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>My greeting!</title>
+    <script>
+        /* Defining Table
+         * Input: A person's name
+         * Processing: Create a greeting for that person
+         * Output: The greeting
+         */
+        function greetUser() {
+            // This line prompts the user to type in his name.
+            let input_name = prompt("Please enter your name: ");
+            // Create a personalized greeting for the user. 
+            let MyGreeting = " How are you " + input_name + "?" + " I thing you're doing great!";
+            // The next line causes the computer to display 
+            // a greeting to the user in a popup window. 
+            alert(MyGreeting);
+        }
+    </script>
+
+</head>
+
+<body>
+    <button type="button" onclick=" greetUser ( ) ">what's up?</button>
+    <p>
+        <a href="https://validator.w3.org/check/referer">
+            <img src="http://mumstudents.org/cs472/images/w3c-html.png" alt="Validate" /> </a>
+    </p>
+</body>
+
+</html>
