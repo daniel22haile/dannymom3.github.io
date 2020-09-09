@@ -1,0 +1,323 @@
+/*Styles for my home page and menu*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: #667;
+}
+
+@font-face {
+    font-family: myFont;
+    src: url(font/Lobster-Regular.ttf);
+}
+
+@font-face {
+    font-family: myFont2;
+    src: url(Anton-Regular.tff);
+}
+
+* {
+    font-family: myFont2;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin-left: 10px;
+    /*    text-align: center;*/
+    letter-spacing: 2px;
+}
+
+#wrapper {
+    border: 2px solid rgba(89, 171, 227, .3);
+    border-radius: 5px;
+    background-color: rgba(107, 215, 204, .3);
+    margin: 20px;
+    padding: 10px;
+}
+
+blockquote,
+h1,
+h2,
+h3,
+h4 {
+    border: 2px solid rgba(89, 171, 227, .3);
+    border-radius: 5px;
+    background-color: rgba(137, 196, 244, .3);
+    margin: 20px;
+    padding: 10px;
+}
+
+body {
+    font-size: 100%;
+    font-family: verdana, helvetica, arial, sans-serif;
+    /*    background: url(../images/shuka.png);*/
+    /*   background-attachment: fixed;*/
+}
+
+#wrapper {
+    /*    width: 940px;*/
+    width: 78%;
+    max-width: 1100px;
+    margin: 180px auto 20px auto;
+    /*    background: #98fb98;*/
+}
+
+ul,
+ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+header {
+    /*
+    height: 200px;
+*/
+    /*    background: #ff0;*/
+    margin-bottom: 20px;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    /*to fix the broken nav*/
+    background: rgba(209, 237, 242, .95);
+    z-index: 1;
+    /*to display the rotating image inside the header*/
+}
+
+nav {
+    height: 50px;
+    line-height: 50px;
+    background: #05a;
+}
+
+nav ul {
+    list-style-type: none;
+    /*    width:1000px;*/
+    width: 89%;
+    max-width: 1100%;
+    margin: 0 auto;
+    /*To center the nav*/
+}
+
+nav li {
+    float: left;
+    width: 20%;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    display: block;
+    color: #fff;
+}
+
+
+/*    height: 300px;*/
+
+main {
+    /*    height: 400px;*/
+    /*    background: #ccc;*/
+    /*    width: 580px;   580px / 940px*/
+    margin-top: 28px;
+    width: 59.57%;
+    float: left;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin-left: 30px;
+}
+
+p+ul {
+    margin: -13px 0 18px 30px;
+}
+
+aside {
+    /*    height: 300px;*/
+    margin-top: 30px;
+    background: #fee;
+    margin-bottom: 20px;
+    /*    width:340px;*/
+    width: 36.17%;
+    padding: 15px;
+    border: 1px solid #667;
+    border-radius: 10px;
+    float: right;
+}
+
+aside li {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+figure {
+    margin-bottom: 20px;
+}
+
+
+/*
+figcaption {
+    background: #530;
+    color: #fff;
+    padding: 8px;
+    font-size: .8em;
+    font-style:italic;
+}
+*/
+
+footer {
+    height: 50px;
+    border-top: 1px dotted #667;
+    line-height: 50px;
+    /*    background: #f00;*/
+    font-size: .875em;
+    clear: both;
+}
+
+footer ul {
+    list-style-type: none;
+    float: right;
+}
+
+footer li {
+    float: left;
+    margin-left: 30px;
+}
+
+footer a {
+    color: #667;
+}
+
+img {
+    display: block;
+    /* The logo everything will be hot if display block is not commenting out. so, the solution is #logo: inline.....like i did above, that helps only the logo is to be hot not the other spaces*/
+    max-width: 100%;
+    /*to fix the bigger images out of the container*/
+    border-radius: 10px;
+    /*border radius makes curved around the corner*/
+    margin-right: 20px;
+}
+
+img.right {
+    float: right;
+    /*when floating to the right, and margin left*/
+    margin: 0 0 10px 30px;
+}
+
+img.left {
+    float: left;
+    /*when floating to the left, add margin right*/
+    margin: 0 30px 10px 0;
+}
+
+
+/*++++Typography++++++*/
+
+
+/* 1em = 16px */
+
+h1,
+h2,
+h3 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    line-height: 1.1;
+    font-family: times, serif;
+}
+
+h1 {
+    font-size: 2.488em;
+    font-weight: 200;
+    color: #05a;
+}
+
+h2 {
+    font-size: 2.074em;
+    color: #555;
+}
+
+h3 {
+    font-size: 1.728em;
+    color: #667;
+    text-transform: uppercase;
+    font-weight: 200;
+}
+
+p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+blockquote {
+    margin-bottom: 20px;
+    font-size: 1.224em;
+    font-style: italic;
+    border-left: 30px solid #05a;
+    padding-left: 30px;
+}
+
+p.background {
+    background: lightblue;
+    padding: 20px;
+    font-size: 1.463em;
+    font-family: "Times New Roman", serif;
+    line-height: 1.2;
+    font-style: italic;
+}
+
+nav li {
+    font-size: .9em;
+}
+
+aside p {
+    font-size: .9em;
+    color: #000;
+    margin-bottom: 15px;
+    /*   text-shadow: 0 1px 0 #000;*/
+}
+
+
+/* form ul {
+    list-style-type: none;
+    margin-left: 10px;
+    margin-bottom: 10px;
+} */
+
+@media screen and (max-width:800px) {
+    #wrapper {
+        /*    width: 940px;*/
+        width: 95%;
+    }
+    nav ul {
+        list-style-type: none;
+        /*    width: 1000px;*/
+        width: 96%;
+    }
+    main {
+        /*    height: 400px;*/
+        /*    background: #ccc;*/
+        /*    width: 580px;*/
+        width: 52.57%;
+        /*580 / 940*/
+        float: none;
+    }
+    aside {
+        /*    height: 300px;*/
+        border: 1px solid #667;
+        background: #fff;
+        /*    width: 340px;*/
+        width: 36.17%;
+        float: none;
+    }
+}
