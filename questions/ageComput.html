@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>age compute</title>
+    <script>
+        function computeAge() {
+            let yearBirth = document.getElementById("input1").value;
+            yearBirth = parseInt(yearBirth);
+            let currentYear = document.getElementById("input2").value;
+            currentYear = parseInt(currentYear);
+            // let date = new Date();
+            // let currentYear = date.getFullYear();
+
+            let myAge = currentYear - yearBirth;
+            let output = "You are " + myAge + " years old.";
+            document.getElementById("ageId").innerHTML = output;
+        }
+    </script>
+</head>
+
+<body>
+    Year of Birth:<input type="text" id="input1"><br> Current Year:<input type="text" id="input2"><br>
+    <button onclick="computeAge()" value="age">How old am I?</button><br>
+    <span id="ageId"></span>
+</body>
+
+</html>
