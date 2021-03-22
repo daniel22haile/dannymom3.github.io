@@ -56,12 +56,33 @@ function multiply(arr) {
  * @returns {number} returns the longest string in a given array
  */
 function findLongestWord(arr) {
-    // let longest = -Infinity;
     let longest = arr[0].length;
-    for (let i = 1; i < arr.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
         if (arr[i].length > longest) {
             longest = arr[i].length;
         }
     }
     return longest;
+}
+
+function reverseArray(arr) {
+    let newArr = [];
+
+    for (let i = arr.length - 1; i >= 0; i--) {
+        newArr.push(arr[i]);
+    }
+    return newArr;
+}
+let ar = [1, 2, 3, 4, 5];
+console.log(reverseArray(ar));
+
+function reverseArrayInPlace(arr) {
+    let i = 0; //declare i outside the while loop
+    let j = arr.length - 1;
+    while (i < j) {
+        let temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+    return arr;
 }
