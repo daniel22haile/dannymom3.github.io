@@ -1,7 +1,5 @@
 "use strict";
 
-
-
 /**
  * @since March 22 / 2021
  * @author Daniel Haile
@@ -55,16 +53,30 @@ function multiply(arr) {
  * @param {Array} arr user input Array
  * @returns {number} returns the longest string in a given array
  */
-function findLongestWord(arr) {
-    let longest = arr[0].length;
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i].length > longest) {
-            longest = arr[i].length;
-        }
+function findLongestWord(str) {
+    let longestWord = str[0];
+    //Method 1
+    // for (let word of str) {
+    //     if (word.length > longestWord.length) {
+    //         longestWord = word;
+    //     }
+    // }
+
+    //OR Method 2
+    for (let i = 1; i < str.length; i++) {
+        if (str[i].length > longestWord.length)
+            longestWord = str[i];
     }
-    return longest;
+    return longestWord;
 }
 
+
+
+/**
+ * 
+ * @param {Array} arr user input array 
+ * @returns {array} returns a reversed user input array
+ */
 function reverseArray(arr) {
     let newArr = [];
 
@@ -73,9 +85,12 @@ function reverseArray(arr) {
     }
     return newArr;
 }
-let ar = [1, 2, 3, 4, 5];
-console.log(reverseArray(ar));
 
+/**
+ * 
+ * @param {Array} arr user input array 
+ * @returns {array} returns a reversed user input array inplace
+ */
 function reverseArrayInPlace(arr) {
     let i = 0; //declare i outside the while loop
     let j = arr.length - 1;
@@ -83,6 +98,21 @@ function reverseArrayInPlace(arr) {
         let temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
+        i++;
+        j--;
     }
     return arr;
+}
+
+function scoreExams(studentAnswer, correctAnswers) {
+    let score = []
+    for (let eachAnswer of studentAnswer) {
+        let answer = 0
+        for (let i = 0; i < eachAnswer.length; i++) {
+            if (eachAnswer[i] === correctAnswers[i])
+                answer++;
+        }
+        score.push(answer)
+    }
+    return score;
 }

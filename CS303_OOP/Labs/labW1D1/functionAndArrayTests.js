@@ -68,25 +68,18 @@ describe("reverseArray", function() {
 });
 
 /*
-5.  Write a function, scoreExams, that takes an array of arrays of student answers and an array of the correct answers.  
-It should compare each student’s answers against the correct answers and return an array holding the scores of each student.  The score 
-for each student is a count of the number of correct answers (i.e., matches with the key of correct answers).  For example
+5.  Write a function, scoreExams, that takes an array of arrays of student 
+answers and an array of the correct answers. It should compare each 
+student’s answers against the correct answers and return an array holding the 
+scores of each student.  The score for each student is a count of the 
+number of correct answers (i.e., matches with the key of correct answers). 
 
+For example:
 const studentAnswers = [[1, 1, 2], [2, 1, 2], [3, 1, 3]];
 const correctAnswers = [3, 1, 2];
 scoreExams(studentAnswers, correctAnswers)); --> [2, 2, 2]
 */
-/*
-4.	Reverse an Array 
-Arrays have a reverse method that changes the array by inverting the order
- in which its elements appear. For this exercise, write two functions, 
- reverseArray and reverseArrayInPlace. The first, reverseArray,
-  takes an array as argument and produces a new array that has 
-  the same elements in the inverse order. The second, 
-  reverseArrayInPlace, does what the reverse method does: 
-  it modifies the array given as argument by reversing its elements. 
-  Neither may use the standard reverse method. 
-*/
+
 describe("score exam", function() {
     const studentAnswers = [
         [1, 1, 2],
