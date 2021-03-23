@@ -103,7 +103,12 @@ function reverseArrayInPlace(arr) {
     }
     return arr;
 }
-
+/**
+ * 
+ * @param {Array} studentAnswer is input array of student answer
+ * @param {Array} correctAnswers is input array of correct answers
+ * @returns {Array} returns score of students
+ */
 function scoreExams(studentAnswer, correctAnswers) {
     let score = []
     for (let eachAnswer of studentAnswer) {
