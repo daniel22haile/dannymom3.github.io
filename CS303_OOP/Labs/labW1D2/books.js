@@ -1,4 +1,6 @@
 "use strict";
+/* You need the module.exports when testing in node.  Comment it out when you send your file to the browser */
+//module.exports = { findTitles, findAuthors, addBook }; //add all of your function names here that you need for the node mocha tests
 
 let library = [
     { title: "The Road Ahead", author: "Bill Gates", libraryID: 1254 },
@@ -7,8 +9,27 @@ let library = [
 ];
 
 /**
+ * Event handler to display data in library 
+ * @returns {string} return book datas from array
+ */
+function bookLibrary() {
+    let title = document.getElementById("title").value;
+    let author = document.getElementById("author").value;
+    let libraryID = (document.getElementById("id").value);
+
+    library.push({ title: title, author: author, libraryID: libraryID });
+
+    let display = [];
+    for (let element of library) {
+        display.push(element.title + ", " + element.author + ", " + element.libraryID + "<br>");
+    }
+
+    document.getElementById("display").innerHTML = display;
+}
+
+/**
  * Event handler to display library titles sorted alphabetically
- * @returns {undefined}
+ * @returns {string} return titles from array
  */
 function showTitles() {
 
@@ -23,13 +44,47 @@ function showTitles() {
     let textArea = document.getElementById("displayArea");
     textArea.innerHTML = titleString;
 }
-
 /**
  * 
  * @return {object} array holding all titles as elements
  */
 function findTitles() {
     let titles = [];
+    for (const book of library) {
+        titles.push(book.title);
+    }
+    titles.sort();
+    // titles = ["Mockingjay: The Final Book of The Hunger Games", "The Road Ahead", "Walter Isaacson"];  //FIX THIS!!
     // implement this and other functions
     return titles;
+}
+
+/**
+ * Event handler to display library author sorted alphabetically
+ * @returns {string} return authors from array
+ */
+function showAuthor() {
+
+    let author = [];
+    for (let book of library) {
+        author.push(book.author + "\n");
+    }
+    author = author.sort();
+
+    document.getElementById("displayArea").innerHTML = author;
+}
+
+/**
+ * Event handler to display library libraryId sorted numericaly
+ * @returns {string} return libraryId from array
+ */
+function libraryId() {
+
+    let libraryID = [];
+    for (let book of library) {
+        libraryID.push(book.libraryID + "\n");
+    }
+    libraryID = libraryID.sort((first, last) => first - last);
+
+    document.getElementById("displayArea").innerHTML = libraryID;
 }

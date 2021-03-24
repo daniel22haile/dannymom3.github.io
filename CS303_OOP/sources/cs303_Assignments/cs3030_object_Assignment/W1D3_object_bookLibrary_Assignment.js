@@ -65,8 +65,7 @@ function libraryId() {
     for (let book of library) {
         libraryID.push(book.libraryID + "\n");
     }
-    libraryID = libraryID.sort((ini, last) => ini-last);
+    libraryID = libraryID.sort((ini, last) => ini - last);
 
     document.getElementById("displayArea").innerHTML = libraryID;
 }
-

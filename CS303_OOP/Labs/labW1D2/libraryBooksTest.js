@@ -1,4 +1,12 @@
 "use strict";
+/*
+const assert = require("assert"); //always need this with node
+const myExports = require("./app.js"); //with node need the name of your file with your functions here
+const findTitles = myExports.findTitles; //do this for all of the functions used in the Mocha tests
+const findAuthors = myExports.findAuthors;
+const addBook = myExports.addBook;
+*/
+
 /* global assert findTitles findAuthors findIDs addBook */
 /*
 Write a JavaScript program that will accept title, author, and libraryID values from an HTML page and create new book objects for each entry.  
@@ -7,10 +15,9 @@ o	addBook, which will take title, author, and libraryID as inputs.  It will crea
 o	findTitles, which will find all the book titles in libraryBooks and return them in an alphabetically ordered array.
 o	findAuthors, which will find all the authors in libraryBooks and return them in an alphabetically ordered array.
 o	findIDs, which will find all the libraryIDs in libraryBooks and return them in an alphabetically ordered array.
-
 */
 
-describe("library", function () {
+describe("library", function() {
 
     //This should be used as the "library database" for testing.
     // let library = [
@@ -24,23 +31,24 @@ describe("library", function () {
     const ids = [1254, 3245, 4264];
 
 
-    it("find titles", function () {
+    it("find titles", function() {
         assert.deepEqual(findTitles(), titles);
     });
 
-    it("find authors", function () {
-        assert.deepStrictEqual(findAuthors(), authors);
+    it("find authors", function() {
+        assert.deepStrictEqual(showAuthor(), authors);
     });
 
-    it("find ids", function () {
-        assert.deepStrictEqual(findIDs(), authors);
+    it("find ids", function() {
+        assert.deepStrictEqual(findIDs(), ids);
     });
 
-    it("add book", function () {
-        const newBook = {title: "My New Book", author: "Me Too", libraryID: 1144};
-        const newIDs = ids.push(1144);
+    it("add book", function() {
+        const newBook = { title: "My New Book", author: "Me Too", libraryID: 1144 };
+        ids.push(1144);
+        ids.sort();
         assert.deepStrictEqual(addBook(newBook), newBook);
-        assert.deepStrictEqual(findIDs(), newIDs);
+        //assert.deepStrictEqual(findIDs(), ids);
     });
 
 });

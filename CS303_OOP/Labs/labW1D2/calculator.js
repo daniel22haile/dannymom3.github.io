@@ -1,5 +1,10 @@
 "use strict";
+const calculator = {
+    sum() {
+        return this.a + this.b;
+    },
 
-
-
-const calculator = {};  // implement this
+    mul() {
+        return this.a * this.b;
+    },
+};
