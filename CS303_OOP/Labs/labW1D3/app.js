@@ -1,7 +1,7 @@
 "use strict";
 //const prompt = require("prompt-sync")();
 /* You need the module.exports when testing in node.  Comment it out when you send your file to the browser */
-module.exports = { Accumulator, Calculator }; //add all of your function names here that you need for the node mocha tests
+//module.exports = { Accumulator, Calculator }; //add all of your function names here that you need for the node mocha tests
 
 /**
  * 
@@ -15,12 +15,12 @@ function Accumulator(startingValue, increment) {
     this.accumulate = function() {
         this.startingValue += increment;
 
-    };
-    let accumulator = new Accumulator(startingValue, increment);
-    this.report = function() {
-        return this.accumulator.startingValue;
-    };
 
+        let accumulator = new Accumulator(startingValue, increment);
+        this.report = function() {
+            return this.accumulator.startingValue;
+        }
+    }
 }
 
 // let accumulator = new Accumulator(5, 10);
