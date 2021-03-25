@@ -15,12 +15,8 @@ function Accumulator(startingValue, increment) {
     this.accumulate = function() {
         this.startingValue += increment;
 
+    };
 
-        let accumulator = new Accumulator(startingValue, increment);
-        this.report = function() {
-            return this.accumulator.startingValue;
-        }
-    }
 }
 
 // let accumulator = new Accumulator(5, 10);
