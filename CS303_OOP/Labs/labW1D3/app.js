@@ -23,12 +23,12 @@ function Accumulator(startingValue, increment) {
 
 }
 
-let accumulator = new Accumulator(5, 10);
-accumulator.accumulate();
-accumulator.accumulate();
+// let accumulator = new Accumulator(5, 10);
+// accumulator.accumulate();
+// accumulator.accumulate();
 
 
-console.log(accumulator.startingValue);
+// console.log(accumulator.startingValue);
 
 /**
  * @returns {Calculator} this is a constructor function
