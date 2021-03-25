@@ -18,3 +18,11 @@ let calculator = {
 calculator.read();
 console.log("sum is: ", calculator.sum());
 console.log("product is: ", calculator.mul());
+
+
+let user = {
+    name: "John",
+}
+let admin = user;
+user = null;
+console.log(admin.name);
