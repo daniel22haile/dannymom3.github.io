@@ -12,11 +12,22 @@
 
 
 
-// describe("readNumber", function() {
+describe("readNumber", function() {
+
+    it("if an array first string is a number, returns the first number", function() {
+        assert.strictEqual(readNumber(["1abc23", "13fw", "123.3"]), 0);
+    });
+
+    it("if an array length is 0 returns 0", function() {
+        assert.deepEqual(readNumber([]), 0);
+    });
+
+    it("if an array first string is not a number, returns 0", function() {
+        assert.deepEqual(readNumber(["111abc", "13fw", "123.3"]), 0);
+    });
 
 
-
-// });
+});
 
 
 //Uppercase the first character.
