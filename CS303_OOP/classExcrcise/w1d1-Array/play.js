@@ -1,4 +1,7 @@
 "use strict";
+
+const { resourceLimits } = require("node:worker_threads");
+
 const prompt = require("prompt-sync")();
 
 let userName = "John";
@@ -113,5 +116,9 @@ function minOfTwo(num1, num2) {
 }
 
 function pow(base, exponent) {
-    return base * pow(base, exponent - 1);
+    let result = base;
+    for (let i = 1; i < exponent; i++) {
+        result *= base;
+    }
+    return result;
 }

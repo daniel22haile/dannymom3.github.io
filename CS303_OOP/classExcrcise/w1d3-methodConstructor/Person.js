@@ -7,7 +7,7 @@ const Person = function(firstName, birthYear) {
 const danny = new Person("Daniel", 1992);
 console.log(danny);
 // 1. New {} is created
-// 2. function is calledd, this = {}
+// 2. function is called, this = {}
 // 3. {} linked to prototype
 // 4. function authomatically return {}
 

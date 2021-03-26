@@ -13,18 +13,21 @@ function Accumulator(startingValue, increment) {
     this.increment = increment;
 
     this.accumulate = function() {
-        this.startingValue += increment;
+        this.startingValue += this.increment;
 
+    };
+    this.report = function() {
+        return this.accumulate();
     };
 
 }
 
-// let accumulator = new Accumulator(5, 10);
-// accumulator.accumulate();
-// accumulator.accumulate();
+let accumulator = new Accumulator(5, 10);
+accumulator.report();
+accumulator.report();
 
 
-// console.log(accumulator.startingValue);
+console.log(accumulator.startingValue);
 
 /**
  * @returns {Calculator} this is a constructor function
@@ -45,8 +48,8 @@ function Calculator() {
     };
 };
 
-// let calculator = new Calculator();
-// calculator.setValues(20, 30);
+let calculator = new Calculator();
+calculator.setValues(20, 30);
 
-// console.log("Sum: " + calculator.sum());
-// console.log("Mul: " + calculator.mul());
+console.log("Sum: " + calculator.sum());
+console.log("Mul: " + calculator.mul());

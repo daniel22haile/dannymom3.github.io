@@ -14,7 +14,7 @@ name: "John"
 name: "Ann"
 });
 
-==============EXPLANATIONS============================]
+==============EXPLANATIONS============================
 
 In function marry(), two arguments are "man", "woman"
 

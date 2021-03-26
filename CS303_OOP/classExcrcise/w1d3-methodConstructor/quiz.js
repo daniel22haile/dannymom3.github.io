@@ -44,6 +44,7 @@
  * @param {Object} grades on quiz
  * @returns {number} returns average grade
  */
+
 const gradeReport = { s101: 3, s102: 2, s103: 3 };
 
 function averageScore(grades) {

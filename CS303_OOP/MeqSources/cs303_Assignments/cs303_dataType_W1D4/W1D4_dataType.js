@@ -1,20 +1,21 @@
 "use strict";
 
-///////////////////////Can i add a string property
+//Can i add a string property
 let str = "Hello";
 
 str.test = 5; // (*)
 
-console.log(str.test);//An error (strict property)
+console.log(str.test); //An error (strict property)
 
-//////////////////////////////////////////////////Sum numbers from the visitor.
+//Sum numbers from the visitor.
 
 let num1 = parseFloat(prompt("The first number?", ""));
 let num2 = parseFloat(prompt("The second number?", ""));
 
 console.log(num1 + num2);
 
-/////////////////////////////Repeat until the input is a number (use the mocha test in VSCode from the sandbox)
+
+//Repeat until the input is a number (use the mocha test in VSCode from the sandbox)
 /**
  * Read number from the user.
  * @returns {number} Display number
@@ -33,7 +34,7 @@ function readNumber() {
 
 console.log(`Read: ${readNumber()}`);
 
-///////////////////////////////An occasional infinite loop.
+//An occasional infinite loop.
 
 let i = 0;
 while (i < 11) {
@@ -42,7 +43,7 @@ while (i < 11) {
         console.log(i);
 }
 
-/////////////////////////////A random number from min to max
+//A random number from min to max
 /**
  * Display random number.
  * @param {Number} min input minimum number
@@ -55,7 +56,7 @@ function random(min, max) {
 
 console.log(random(1, 5));
 
-//////////////////////////A random integer from min to max
+//A random integer from min to max
 /**
  * Display random integer.
  * @param {Number} min input minimum number
@@ -70,7 +71,7 @@ function randomInteger(min, max) {
 
 console.log(randomInteger(1, 3));
 
-//////////////////////////Uppercase the first character.
+//Uppercase the first character.
 /**
  * Display string with first uppercase letter.
  * @param {String} str input string
@@ -82,9 +83,9 @@ function ucFirst(str) {
     return str[0].toUpperCase() + str.slice(1);
 }
 
-console(ucFirst("mequanint")); // Mequanint
+console(ucFirst("daniel")); // Daniel
 
-////////////////////////////////Check for spam
+//Check for spam
 /**
  * Display true false value
  * @param {String} str input string
@@ -96,9 +97,9 @@ function checkSpam(str) {
     return lowerStr.includes("viagra") || lowerStr.includes("xxx");
 }
 
-console.log(checkSpam("buy ViAgRA now"));// true
+console.log(checkSpam("buy ViAgRA now")); // true
 
-///////////////////////////////////Truncate the text
+//Truncate the text
 /**
  * Display truncated text.
  * @param {string} str input text
@@ -111,7 +112,7 @@ function truncate(str, maxlength) {
 }
 console.log(truncate("Hello", 10));
 
-///////////////////////////////////Extract the money
+//Extract the money
 /**
  * Display extracted value
  * @param {String} str input string
@@ -119,10 +120,12 @@ console.log(truncate("Hello", 10));
  */
 function extractCurrencyValue(str) {
     return +str.slice(1);
+    //OR 
+    //return parseInt(str.slice(1));
 }
-console.log(extractCurrencyValue("$20"));//20
+console.log(extractCurrencyValue("$20")); //20
 
-//////////////////////////////////////A maximal subarray (use the mocha test in VSCode from the sandbox)
+//A maximal subarray (use the mocha test in VSCode from the sandbox)
 /**
  * Display the contiguous subarray of arr with the maximal sum of items
  * @param {object} arr input array of numbers.
@@ -145,7 +148,7 @@ console.log(getMaxSubSum([-1, 2, 3, -9])); // 5
 console.log(getMaxSubSum([-1, 2, 3, -9, 11])); // 11
 console.log(getMaxSubSum([-2, -1, 1, 2])); // 3
 
-//////////////////////////////////////Translate border-left-width to borderLeftWidth
+//Translate border-left-width to borderLeftWidth
 /**
  * Display translated string
  * @param {string} str input string text.
@@ -153,11 +156,11 @@ console.log(getMaxSubSum([-2, -1, 1, 2])); // 3
  */
 function camelize(str) {
     return str.split("-").map(
-        // capitalizes first letters of all array items except the first one
-        // converts ['my', 'long', 'word'] into ['my', 'Long', 'Word']
-        (word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1)
-    )
+            // capitalizes first letters of all array items except the first one
+            // converts ['my', 'long', 'word'] into ['my', 'Long', 'Word']
+            (word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1)
+        )
         .join(""); // joins ['my', 'Long', 'Word'] into 'myLongWord'
 }
 
-console.log(camelize("background-color"));//'backgroundColor'
+console.log(camelize("background-color")); //'backgroundColor'
