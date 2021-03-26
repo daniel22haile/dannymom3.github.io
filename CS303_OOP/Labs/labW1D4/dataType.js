@@ -12,8 +12,8 @@ function readNumber(arr) {
     if (arr.length === 0) return 0;
 
     for (let i = 0; i < arr.length; i++) {
-        if (typeof(arr[0]) === "Number") {
-            return arr[0];
+        if (Number(arr[0])) {
+            return Number(arr[0]);
         } else {
             return 0;
         }
