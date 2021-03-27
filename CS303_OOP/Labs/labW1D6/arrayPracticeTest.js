@@ -62,10 +62,10 @@ describe("filter practice", function() {
     });
 
     /* complete the following similar to includes even test */
-    it("includes even age -- write this test", function() {
-        assert.deepEqual(includesEvenAge(peopleArray), true);
-        const peopleOddAge = [{ name: "Sam", age: 15 }, { name: "Lucy", age: 13 }, { name: "Barney", age: 81 }];
-        assert.deepEqual(includesEvenAge(peopleOddAge), false);
-    });
+    // it("includes even age -- write this test", function() {
+    //     assert.deepEqual(includesEvenAge(peopleArray), true);
+    //     const peopleOddAge = [{ name: "Sam", age: 15 }, { name: "Lucy", age: 13 }, { name: "Barney", age: 81 }];
+    //     assert.deepEqual(includesEvenAge(peopleOddAge), false);
+    // });
 
 });
