@@ -108,3 +108,21 @@ function libraryId() {
 
     document.getElementById("displayArea").innerHTML = libraryID;
 }
+
+/**
+ * Event handler to display library titles scrambled by word size
+ * @returns {}
+ */
+/* scramble -- meaning put something mixup and put together */
+function scramble() {
+    /*get all the titles */
+    const allTitles = findTitles();
+    /*put all of the words into an array */
+    /* find all words of different lengths and put into each into own array  --> array of arrays*/
+    /* join each array back into a string --> array of strings */
+    const wordStringArray = null; //array holding concatenated strings of n letter words
+    /* join the array of strings into a single string with \n line breaks */
+    const scrambleString = wordStringArray.join("\n");
+    /* display in the text area */
+    textArea.innerHTML = scrambleString;
+}

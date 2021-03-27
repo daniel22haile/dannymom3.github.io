@@ -7,7 +7,4 @@ console.log(arr1);
 
 //---------------------------------
 const arr = [1, 2, 8, 6, 7, 9];
-arr.forEach((el) => {
-    console.log(el % 2 === 0)
-
-});
+arr.forEach((element) => console.log(el % 2 === 0));

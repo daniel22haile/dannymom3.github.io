@@ -14,8 +14,8 @@
 
 describe("readNumber", function() {
 
-    it("if an array first string is '123' returns 123", function() {
-        assert.deepEqual(readNumber(["123", "13fw", "123.3"]), 123);
+    it("if an array first string is '777' returns 777", function() {
+        assert.deepEqual(readNumber(["777", "12rg3", "7hg77", "13fw", "123", "123.3"]), 777);
     });
 
     it("if an array length is 0 returns 0", function() {

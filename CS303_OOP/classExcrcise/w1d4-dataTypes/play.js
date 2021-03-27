@@ -19,23 +19,28 @@ console.log(123e10); //123 appends 10 zeros
 
 console.log("\u{1F60D}"); //😍 smile face
 
-let foo = "12";
-let answer = (Number(foo));
-console.log(typeof(answer) === typeof(Number));
+// let foo = "12";
+// let answer = (Number(foo));
+// console.log(typeof(answer) === typeof(Number));
 
-function readNumber(arr) {
+// function readNumber(arr) {
 
-    if (arr.length === 0) return 0;
+//     if (arr.length === 0) return 0;
 
-    for (let i = 0; i < arr.length; i++) {
-        if (Number(arr[0])) {
-            return Number(arr[0]);
-        } else {
-            return 0;
-        }
-    }
-}
+//     for (let i = 0; i < arr.length; i++) {
+//         if (parseInt(arr[i])) {
+//             return Number(arr[i]);
+//         } else {
+//             return;
+//         }
+//     }
+// }
 
-let nums = ["123", "gd33"];
-console.log(readNumber(nums));
-console.log(typeof(Number(nums[0])));
+// let nums = ["12r3", "gd33", "123"];
+// console.log(readNumber(nums));
+//console.log(typeof(Number(nums[0])));
+
+let foo = 1221;
+foo = "false";
+foo = "Danny";
+console.log(foo); //Danny --//TODO - this is why javascript is called dynamic (loose) typing
