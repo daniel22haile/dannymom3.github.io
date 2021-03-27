@@ -8,6 +8,14 @@ Write a function filterRange(arr, a, b) that gets an array arr, looks for elemen
 equal to a and lower or equal to b and return a result as an array.
 The function should not modify the array. It should return the new array.
 */
+
+/**
+ * 
+ * @param {Object} arr input array
+ * @param {number} a looks a value higher or equal to a
+ * @param {number} b looks for a value from array equal to b
+ * @returns {Object} returns the new array
+ */
 function filterRange(arr, a, b) {
     // added brackets around the expression for better readability
     return arr.filter(item => (a <= item && item <= b));
@@ -67,6 +75,11 @@ function Calculator() {
 /*
 Create a function unique(arr) that should return an array with unique items of arr.
 */
+/**
+ * 
+ * @param {Object} arr input array
+ * @returns {Object} returns a unique items of array
+ */
 function unique(arr) {
     let result = [];
     for (let str of arr) {
