@@ -97,5 +97,6 @@ function maxOfNums(arr) {
 // console.log(maxOfNums(Arrr)); //expect 255
 
 function findMaxAge(arr) {
-
+    let result = arr.reduce((accu, item) => [{ name: item.name, age: Math.max(item.age) }]);
+    return result;
 }

@@ -97,11 +97,10 @@ describe("reduce practice", function() {
     });
 
 
-    // it("find even age ", function() {
-    //     assert.deepEqual(findEvenAge(peopleArray), { name: "William", age: 6 });
-    //     const peopleOddAge = [{ name: "Sam", age: 15 }, { name: "Lucy", age: 13 }, { name: "Barney", age: 81 }];
-    //     assert.deepEqual(findEvenAge(peopleOddAge), undefined);
-    // });
+    it("find max for ages ", function() {
+        assert.deepEqual(findMaxAge(peopleArray), [{ name: "Barney", age: 80 }]);
+
+    });
 
 
 
