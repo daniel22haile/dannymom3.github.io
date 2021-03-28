@@ -1,5 +1,9 @@
 "use strict";
 
+
+
+
+
 /* comment out the node specific code when going to the browser
 const assert = require("assert");  //always need this with node
 const myExports = require("./arrayPractice.js");  //with node need the name of your file with your functions here
@@ -10,9 +14,10 @@ const filterOver10 = myExports.filterOver10;
 const findEvenNum = myExports.findEvenNum;
 const findEvenAge = myExports.findEvenAge;  
 */
-
+let newArr;
 let numArray;
 let peopleArray;
+let peopleArray2;
 
 describe("map practice", function() {
     beforeEach(function() {
@@ -61,11 +66,45 @@ describe("filter practice", function() {
         assert.strictEqual(numArray.includes(15), false);
     });
 
+
+
     /* complete the following similar to includes even test */
     // it("includes even age -- write this test", function() {
-    //     assert.deepEqual(includesEvenAge(peopleArray), true);
+    //     assert.deepEqual(includesEvenAge(peopleArray), false);
     //     const peopleOddAge = [{ name: "Sam", age: 15 }, { name: "Lucy", age: 13 }, { name: "Barney", age: 81 }];
     //     assert.deepEqual(includesEvenAge(peopleOddAge), false);
     // });
+
+});
+
+
+describe("reduce practice", function() {
+    beforeEach(function() {
+        newArr = [5, 1, 2, 2];
+        peopleArray2 = [{ name: "Sam", age: 15 }, { name: "William", age: 6 }, { name: "Lucy", age: 13 }, { name: "Barney", age: 80 }];
+    });
+
+    it("sum of numbers for array [5, 1, 2, 2] is 10", function() {
+        assert.deepEqual(sumOfNums(newArr), 10);
+    });
+
+    it("average numbers for array [5, 1, 2, 4] is 3", function() {
+        assert.deepEqual(averageNums([5, 1, 2, 4]), 3);
+    });
+
+    it("Maximum number from array [5, 1, 2, 4] is 5", function() {
+        assert.deepEqual(maxOfNums([5, 1, 2, 4]), 5);
+    });
+
+
+    // it("find even age ", function() {
+    //     assert.deepEqual(findEvenAge(peopleArray), { name: "William", age: 6 });
+    //     const peopleOddAge = [{ name: "Sam", age: 15 }, { name: "Lucy", age: 13 }, { name: "Barney", age: 81 }];
+    //     assert.deepEqual(findEvenAge(peopleOddAge), undefined);
+    // });
+
+
+
+
 
 });

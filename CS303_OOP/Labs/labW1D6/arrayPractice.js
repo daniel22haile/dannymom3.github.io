@@ -1,7 +1,7 @@
 "use strict"
 /* eslint-disable */
 /* You need the module.exports when testing in node.  Comment it out when you send your file to the browser */
-module.exports = { doubleNums, doubleAges, filterEven, filterOver10, findEvenNum, findEvenAge }; //add all of your function names here that you need for the node mocha tests
+module.exports = { doubleNums, doubleAges, filterEven, filterOver10, findEvenNum, findEvenAge, includesEvenAge, sumOfNums, averageNums, maxOfNums }; //add all of your function names here that you need for the node mocha tests
 
 //TODO -  double array numbers
 function doubleNums(arr) {
@@ -67,5 +67,35 @@ function includesEvenNum(arr) {
 
 //TODO - check if even age is included
 function includesEvenAge(arr) {
-    return arr.includes((item) => isEven(item.age));
+    // let result = arr.some(item.age % 2 === 0);
+    // return result;
+}
+
+// let user = [{ name: " dan", age: 4 }, { name: "alex", age: 5 }];
+// console.log(includesEvenAge(user));
+
+
+//TODO - reduce practice
+//TODO - find sum of numbers
+
+function sumOfNums(arr) {
+    let result = arr.reduce((sum, value) => sum + value, 0);
+    return result;
+}
+
+function averageNums(arr) {
+    let result = arr.reduce((sum, current) => sum + current, 0);
+    let average = result / arr.length;
+    return average;
+}
+
+function maxOfNums(arr) {
+    return arr.reduce((a, b) => Math.max(a, b));
+}
+
+// let Arrr = [1, 33, 255, 6];
+// console.log(maxOfNums(Arrr)); //expect 255
+
+function findMaxAge(arr) {
+
 }

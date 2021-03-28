@@ -150,5 +150,11 @@ function camelize(str) {
         )
         .join(""); // joins ['my', 'Long', 'Word'] into 'myLongWord'
 }
+//TODO -- Method 2
+function camelize(str) {
+    let arr = str.split("-");
+    let result = arr.map((word, index) => index === 0 ? word : word[0].toUpperCase() + word.slice(1));
+    return result.join("");
+}
 
 //console.log(camelize("background-color")); //'backgroundColor'
