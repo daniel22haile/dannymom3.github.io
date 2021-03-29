@@ -1,7 +1,7 @@
 "use strict"
 /* eslint-disable */
 /* You need the module.exports when testing in node.  Comment it out when you send your file to the browser */
-module.exports = { doubleNums, doubleAges, filterEven, filterOver10, findEvenNum, findEvenAge, includesEvenAge, sumOfNums, averageNums, maxOfNums }; //add all of your function names here that you need for the node mocha tests
+module.exports = { doubleNums, doubleAges, filterEven, filterOver10, findEvenNum, findEvenAge, includesEvenAge, sumOfNums, averageNums, maxOfNums, findMaxAge, avgEvenAges, avgOddAges }; //add all of your function names here that you need for the node mocha tests
 
 //TODO -  double array numbers
 function doubleNums(arr) {
@@ -95,8 +95,46 @@ function maxOfNums(arr) {
 
 // let Arrr = [1, 33, 255, 6];
 // console.log(maxOfNums(Arrr)); //expect 255
+//TODO - NB
 
+
+//TODO - arr.map(function(item, index, array))
+//TODO - arr.reduce(function(accumulator, item, index, array))
+//TODO - arr.filter(function(item, index, array))
+//TODO - arr.find(function(item, index, array))
+//TODO - arr.findIndex(function(item, index, array))
+//TODO - arr.forEach(function(item, index, array))
+
+//TODO - array.includes(element, start)
+//TODO - array.indexOf(item, start)
 function findMaxAge(arr) {
     let result = arr.reduce((accu, item) => [{ name: item.name, age: Math.max(item.age) }]);
     return result;
 }
+
+
+//TODO ?? -- use a chain of map filter reduce to find the average age of people with even number ages
+function avgEvenAges(arr) {
+    let result = arr.map((item => item.age)
+        .filter((value) => isEven(value))
+        .reduce((sum, item) => sum + item, 0)) / arr.length;
+    console.log(result);
+}
+let arrrr = [{ name: "dan", age: 28 }, { name: "alex", age: 38 }];
+console.log(avgEvenAges(`The average even ages is ${arrrr}`));
+
+//TODO ?? -- use a chain of map filter reduce to find the average age of people with odd number ages
+
+function avgOddAges(arr) {
+    let result = arr.map((item => item.age)
+        .filter((value) => !isEven(value)
+            .reduce((sum, item) => sum + item, 0))) / arr.length;
+
+    console.log(result);
+}
+
+let arrrr = [{ name: "dan", age: 28 }, { name: "alex", age: 38 }];
+console.log(avgEvenAges(`The average even ages is ${arrrr}`));
+
+let arrrr1 = [{ name: "dan", age: 21 }, { name: "alex", age: 39 }];
+console.log(avgOddAges(`The average even ages is ${arrrr1}`));
