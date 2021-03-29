@@ -133,8 +133,5 @@ function avgOddAges(arr) {
     console.log(result);
 }
 
-let arrrr = [{ name: "dan", age: 28 }, { name: "alex", age: 38 }];
-console.log(avgEvenAges(`The average even ages is ${arrrr}`));
-
 let arrrr1 = [{ name: "dan", age: 21 }, { name: "alex", age: 39 }];
 console.log(avgOddAges(`The average even ages is ${arrrr1}`));
