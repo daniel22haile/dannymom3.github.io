@@ -16,7 +16,7 @@
 
 
 describe("Test myMap function passed array and function", function() {
-    it("Array and function triple the given array", function() {
+    it("Array and function triple the given array deepEqual", function() {
         let input = [2, 3, 4, 6];
 
         function mapped(value) {
@@ -36,9 +36,13 @@ describe("Test myFilter function passed array and function", function() {
 });
 
 describe("Test myReduce function passed array and function", function() {
-    it("Array and function triple the given array", function() {
+    it("Array and function triple the given array deepEqual", function() {
         let inputVal = [3, 5, 20, 8, 6];
         assert.deepEqual(myReduce(inputVal, reduced, 0), 42);
+    });
+    it("Array and function triple the given array strictEqual", function() {
+        let inputVal = [3, 5, 20, 8, 6];
+        assert.strictEqual(myReduce(inputVal, reduced, 0), 42);
     });
 
 });
