@@ -1,7 +1,8 @@
 "use strict";
 
-function avgLengthOfStr(str) {
-    let arr = str.split("");
+function avgLengthOfStr(arr) {
+    // let splitted = str.split("");
+    // let arr = splitted.join("");
     let sum = 0;
     for (let item of arr) {
         sum += item.length;
@@ -10,7 +11,12 @@ function avgLengthOfStr(str) {
     return sum / arr.length;
 }
 
+let mySt = ["hi", "dan", "word", "this is my longest word ever"];
+console.log(avgLengthOfStr(mySt));
+
 //TODO -- WHAT'S THIS ??? 
-const zen = { xed: 5 };
+const zen = {
+    xed: 5
+};
 zen.xed = 6;
-console.log(zen);
+console.log(zen); //{ xed: 6 }

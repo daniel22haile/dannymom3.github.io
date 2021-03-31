@@ -11,7 +11,6 @@ objects with two properties name and age and returns the average age.
 --------------------------------------------------------------------
 */
 
-
 //Method - 1
 /**
  * 

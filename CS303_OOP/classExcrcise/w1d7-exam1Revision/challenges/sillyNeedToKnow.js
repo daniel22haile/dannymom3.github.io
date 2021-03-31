@@ -40,3 +40,8 @@ let users = [{
         age: 40
     }
 ];
+
+let sum = 0;
+for (let key in users) {
+
+}

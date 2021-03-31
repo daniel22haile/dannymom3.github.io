@@ -10,10 +10,22 @@ console.log("expect Jim, ", jim);
 
 //Q2.
 //a.
-const team2 = {};
+const team2 = { point: "Bob", shooting: "Fred", power: "Jim", small: "Al", center: "Big Sleep" };
 const { point, shooting, small, power, center } = team2;
 
 console.log("expect Big Sleep", center);
 console.log("expect Jim", power);
 
-//b.
+//b. 
+
+//TODO - ?????
+
+let team3 = { Bob: "point guard", Jim: "power forward" };
+let {
+    Bob: one,
+    Jim: four
+} = team3;
+console.log("expect Bob", one);
+console.log("expect Jim", four);
+let baz = "" + 33 + 10;
+console.log(baz);

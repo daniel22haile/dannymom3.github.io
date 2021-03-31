@@ -36,6 +36,6 @@ function gradeQuiz(quizArray, keyArray) {
 
 /* eslint-disable */
 function scoreQuiz(stuAnswers, key) {
-    return 10;
+    return 3;
 }
 console.log("expect   { s101: 3, s102: 2, s103: 3 } ", gradeQuiz(quiz, key));

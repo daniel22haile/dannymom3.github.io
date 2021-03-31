@@ -9,16 +9,14 @@
 */
 
 function longestWord(str) {
-    let splitted = str.split("");
-    let arr = splitted.join("");
+    let arr = str.split(" ");
+    str = arr.join(" ");
 
-    let theLongest = arr[0].length;
+    let theLongest = -Infinity;
 
-    for (let i = 1; i < arr.length; i++) {
-        if (arr[i] > theLongest) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].length > theLongest) {
             theLongest = arr[i].length;
-        } else {
-            theLongest = theLongest;
         }
     }
     return theLongest;
