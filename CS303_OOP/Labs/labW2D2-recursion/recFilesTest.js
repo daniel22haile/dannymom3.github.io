@@ -18,19 +18,19 @@ Comment these out when you send it to the browser with the index.html mocha setu
 // const reverseListLoop = myExports.reverseListLoop;
 
 
-let list = {
-    value: 1,
-    next: {
-        value: 2,
-        next: {
-            value: 3,
-            next: {
-                value: 4,
-                next: null
-            }
-        }
-    }
-};
+// let list = {
+//     value: 1,
+//     next: {
+//         value: 2,
+//         next: {
+//             value: 3,
+//             next: {
+//                 value: 4,
+//                 next: null
+//             }
+//         }
+//     }
+// };
 
 describe("recursion tests", function() {
     it("tests summing by recursion", function() {
