@@ -49,11 +49,11 @@ console.log(myFilter(arr, filtered)) //[2, 4, 6, 20]
 
 //TODO - Write your own version of reduce.
 
-function myReduce(arr, redFunc, init) {
+function myReduce(arr, reducerFunc, init) {
 
     let accum = init;
     for (let i = 0; i < arr.length; i++) {
-        accum = redFunc(accum, arr[i])
+        accum = reducerFunc(accum, arr[i])
     }
 
     return accum
