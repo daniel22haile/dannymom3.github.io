@@ -1,48 +1,65 @@
 "use strict";
+/* global require */
 
-
-
-
-
-/* global assert    */
-/* comment out the node specific code when going to the browser*/
+/* You need the assert and function name declarations to test in node.  
+Comment these out when you send it to the browser with the index.html mocha setup page.
+*/
 // const assert = require("assert"); //always need this with node
-// const myExports = require("./methods.js"); //with node need the name of your file with your functions here
-// const groupById = myExports.groupById; //do this for all of the functions used in the Mocha tests
-// const unique = myExports.unique;
-// const filterRangeInPlace = myExports.filterRangeInPlace;
-// const filterRange = myExports.filterRange;
-// const Calculator = myExports.Calculator;
+// const myExports = require("./recFiles.js"); //with node need the name of your file with your functions here
+// const sumTo = myExports.sumTo; //do this for all of the functions used in the Mocha tests
+// const factorial = myExports.factorial;
+// const fibonacci = myExports.fibonacci;
+
+/* the following are for Thursday */
+// const outputList = myExports.outputList;
+// const outputListLoop = myExports.outputListLoop;
+// const list2Array = myExports.list2Array;
+// const reverseList = myExports.reverseList;
+// const reverseListLoop = myExports.reverseListLoop;
 
 
-describe("Test myMap function passed array and function", function() {
-    it("Array and function triple the given array deepEqual", function() {
-        let input = [2, 3, 4, 6];
-
-        function mapped(value) {
-            return value * 3
+let list = {
+    value: 1,
+    next: {
+        value: 2,
+        next: {
+            value: 3,
+            next: {
+                value: 4,
+                next: null
+            }
         }
-        assert.deepEqual(myMap(input, mapped), [6, 9, 12, 18]);
+    }
+};
+
+describe("recursion tests", function() {
+    it("tests summing by recursion", function() {
+        assert.strictEqual(sumTo(5), 15);
+        assert.strictEqual(sumTo(10), 55);
+    });
+    it("tests factorial", function() {
+        assert.strictEqual(factorial(5), 120);
+        assert.strictEqual(factorial(10), 3628800);
     });
 
-});
-
-describe("Test myFilter function passed array and function", function() {
-    it("Array and function triple the given array", function() {
-        let arr = [2, 4, 3, 6, 9, 20];
-        assert.deepEqual(myFilter(arr, filtered), [2, 4, 6, 20]);
+    it("tests fibonacci 10", function() {
+        assert.strictEqual(fibonacci(10), 55);
     });
-
-});
-
-describe("Test myReduce function passed array and function", function() {
-    it("Array and function triple the given array deepEqual", function() {
-        let inputVal = [3, 5, 20, 8, 6];
-        assert.deepEqual(myReduce(inputVal, reduced, 0), 42);
+    it("tests fibonacci 30", function() {
+        assert.strictEqual(fibonacci(30), 832040);
     });
-    it("Array and function triple the given array strictEqual", function() {
-        let inputVal = [3, 5, 20, 8, 6];
-        assert.strictEqual(myReduce(inputVal, reduced, 0), 42);
-    });
+    // it("recursive version prints 1 2 3 4 to console", function() {
+    //     assert.strictEqual(outputList(list), "1 2 3 4 printed to console");
+    // });
+    // it("iterative version prints 1 2 3 4 to console", function() {
+    //     assert.strictEqual(outputListLoop(list), "1 2 3 4 printed to console");
+    // });
+
+    // it("recursive version prints 4 3 2 1 to console", function() {
+    //     assert.strictEqual(reverseList(list), "4 3 2 1 printed to console");
+    // });
+    // it("loop version prints 4 3 2 1 to console", function() {
+    //     assert.strictEqual(reverseListLoop(list), "4 3 2 1 printed to console");
+    // });
 
 });
