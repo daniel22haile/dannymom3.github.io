@@ -26,22 +26,33 @@ Customer objects will have properties customerId and customerTransactions,
 Example, {customerId : 123, cuustomerTransactions: [10, 50, -40]} would be one element of the array.
 
 */
-const bank = {
-    transactionsDB: [],
-};
+// const bank = {
+//     transactionsDB: [],
+// };
 
-bank.transactionsDB = [
-    { customerId: 1, cuustomerTransactions: [10, 50, -50] },
-    { customerId: 2, cuustomerTransactions: [10, 50, -10] },
-    { customerId: 3, cuustomerTransactions: [5, -5, 55] }
-];
+// bank.transactionsDB = [
+//     { customerId: 1, cuustomerTransactions: [10, 50, -50] },
+//     { customerId: 2, cuustomerTransactions: [10, 50, -10] },
+//     { customerId: 3, cuustomerTransactions: [5, -5, 55] }
+// ];
 
-bank.debit = function(id, amount) {
-    /* make sure current balance is > amount*/
-    const balance = this.getBalance(id);
-    if (balance, amount) {
-        console.log("Insuficient balance, debit not accepted...");
-    } else {
-        this.saveTransacction(id, amount);
-    }
-}
+// bank.debit = function(id, amount) {
+//     /* make sure current balance is > amount*/
+//     const balance = this.getBalance(id);
+//     if (balance, amount) {
+//         console.log("Insuficient balance, debit not accepted...");
+//     } else {
+//         this.saveTransacction(id, amount);
+//     }
+// }
+
+// bank.credit = function(id, amount){
+//     //const balance = this.getBalance(id);
+//    // balance.balance += amount;
+
+//    this.saveTransacction(id, amount);
+// }
+
+// bank.getBalance = function(id){
+
+// }
