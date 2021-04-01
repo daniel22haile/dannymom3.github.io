@@ -7,14 +7,19 @@ module.exports = { sumTo, factorial, fibonacci }; //, outputList, outputListLoop
 
 //TODO - Sum all numbers till the given one
 function sumTo(n) {
-    let sum = 0;
-    for (let i = 1; i <= n; i++) {
-        sum += i;
-    }
-    return sum;
+    // let sum = 0;
+    // for (let i = 1; i <= n; i++) {
+    //     sum += i;
+    // }
+    // return sum;
+
+    if (n < 0) return 0;
+
+    else
+        return n + sumTo(n - 1);
 }
 
-//console.log(sumTo(100));
+console.log(sumTo(1));
 
 
 //TODO -- Calculate ffactorial
