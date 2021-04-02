@@ -26,11 +26,12 @@ console.log("expect 120: ", factorial(5));
  * @returns {number} the factorial
  */
 function recFactorial(number) {
-    if (number === 2) {
-        return 2;
+    if (number < 0) return "invalid input";
+    if (number === 0) {
+        return 1;
     } else {
         return number * recFactorial(number - 1);
     }
 }
 
-console.log("expect 120: ", recFactorial(1));
+console.log("expect 120: ", recFactorial(-5));
