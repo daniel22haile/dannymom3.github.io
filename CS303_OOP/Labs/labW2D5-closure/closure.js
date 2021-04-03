@@ -21,22 +21,17 @@ console.log(counter2()); // 1
 
 
 
-
 function makeArmy() {
     let shooters = [];
-
     for (let i = 0; i < 10; i++) {
         let shooter = function() { // shooter function
             console.log(i); // should show its number
         };
         shooters.push(shooter);
     }
-
     return shooters;
 }
-
 let army = makeArmy();
-
 // Now the code works correctly
 army[0](); // 0
 army[5](); // 5
@@ -76,13 +71,12 @@ let name = "John";
 function sayHi() {
     console.log("Hi, " + name);
 }
-
 name = "Pete";
 
 sayHi(); // what will it show: "John" or "Pete"? Hi, pete.
 
 
-/////////////////////////////////Filter inBetween
+//Filter inBetween
 function inBetween(a, b) {
     return function(x) {
         return (x >= a && x <= b);
@@ -90,9 +84,7 @@ function inBetween(a, b) {
 }
 
 //Filter inArray
-
 function inArray(arr) {
-
     return function(num) {
         for (let i = 0; i < arr.length; i++) {
             if (num === arr[i]) return true;
