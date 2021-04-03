@@ -34,4 +34,4 @@ function recFactorial(number) {
     }
 }
 
-console.log("expect 120: ", recFactorial(-5));
+console.log("expect 120: ", recFactorial(5));

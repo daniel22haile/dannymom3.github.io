@@ -1,6 +1,7 @@
 "use strict";
 
-///////////////////////////////////////rest in function call.
+//TODO -- Q10
+//rest in function call.
 
 function addNumbers(...arr) {
     let sum = 0;
@@ -13,8 +14,8 @@ function addNumbers(...arr) {
 let total = addNumbers(3, 2, 4, 6);
 console.log(total);
 
-////////////////////////////////////////////// rest in destructuring assignment.
+// rest in destructuring assignment.
 
 let [num1, num2, ...rest] = [10, 20, 30, 40];
 
-console.log(rest)//[30, 20]
+console.log(rest) //[30, 20]

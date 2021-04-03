@@ -4,7 +4,7 @@ linkedList.next = { value: 2 };
 linkedList.next.next = { value: 3 };
 linkedList.next.next.next = { value: 4 };
 
-console.log(linkedList); //TODO - Expected --> { value: 1, next: { value: 2, next: { value: 3, next: [Object] } } }
+//console.log(linkedList); //TODO - Expected --> { value: 1, next: { value: 2, next: { value: 3, next: [Object] } } }
 
 let secondList = linkedList.next.next;
 linkedList.next.next = null;

@@ -20,4 +20,4 @@ function setLateLog() {
 }
 
 setLateLog(); // undefined
-console.log(lat); //TODO - I can't access if I use use strict
+console.log(lat); //TODO - I can't access lat if I use use strict
