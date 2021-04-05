@@ -162,7 +162,7 @@ let users = [
     { name: "Ann", age: 19, surname: "Hathaway" }
 ];
 let sortByName = users.sort(byField('name'));
-let sortByAge = users.sort(byField('age'));
+// let sortByAge = users.sort(byField('age'));
 // console.log(sortByName);
 // console.log(sortByAge);
 

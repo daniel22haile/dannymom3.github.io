@@ -27,32 +27,39 @@ Customer objects will have properties customerId and customerTransactions,
 TODO -- Example, {customerId : 123, cuustomerTransactions: [10, 50, -40]} would be one element of the array.
 
 */
-const bank = {
-    transactionDB: [],
-};
 
-bank.transactionDB = [
+function makeBank() {
+    const myBank = {
+        transactionDB: [],
+    };
+    return function() {
+        return myBank;
+    }
+}
+
+const myBank = makeBank()();
+myBank.transactionDB = [
     { custID: 1, custTrans: [10, 50, -40] }, // balance = 20
     { custID: 2, custTrans: [10, 10, -10] }, // balance = 10
     { custID: 3, custTrans: [5, -5, 55] }, // balance = 55
 ];
 
-bank.checkId = function(id) {
-    const foundCustmr = bank.transactionDB.find(customer => customer.custID === id);
+myBank.checkId = function(id) {
+    const foundCustmr = myBank.transactionDB.find(customer => customer.custID === id);
     return foundCustmr;
 };
 
-bank.getBalance = function(id) {
+myBank.getBalance = function(id) {
     const customer = this.checkId(id);
     const balance = customer.custTrans.reduce((sum, item) => sum + item, 0);
     return balance
 }
 
-bank.saveTransaction = function(id, amount) {
+myBank.saveTransaction = function(id, amount) {
     const customer = this.checkId(id);
     customer.custTrans.push(amount);
 }
-bank.debit = function(id, amount) {
+myBank.debit = function(id, amount) {
     let balance = this.getBalance(id);
     if (amount < 0) {
         console.log("Invalid amount. Please enter positive amount !");
@@ -66,7 +73,7 @@ bank.debit = function(id, amount) {
     return balance;
 }
 
-bank.credit = function(id, amount) {
+myBank.credit = function(id, amount) {
     let balance = this.getBalance(id);
     if (amount < 0) {
         console.log("Invalid amount. Please enter positive amount !");
@@ -76,7 +83,7 @@ bank.credit = function(id, amount) {
     }
     return balance;
 }
-bank.totalBalance = function() {
+myBank.totalBalance = function() {
     const custArr = this.transactionDB;
     let sum = 0;
     for (const customer of custArr) {
@@ -87,7 +94,11 @@ bank.totalBalance = function() {
     return sum;
 }
 
-console.log(`Total balance should be: ${bank.totalBalance()}`);
-bank.credit(1, 20);
-bank.debit(1, 1000);
-console.log(`The total should now : ${bank.totalBalance()}`);
+
+
+
+
+console.log(`Total balance should be: ${myBank.totalBalance()}`);
+myBank.credit(1, 20);
+myBank.debit(1, 1000);
+console.log(`The total should now : ${myBank.totalBalance()}`);

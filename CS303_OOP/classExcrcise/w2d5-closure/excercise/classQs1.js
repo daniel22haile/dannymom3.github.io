@@ -4,6 +4,7 @@ Write a function, makeCounter() that declares a local count variable and
 then returns an increment function.  Call it twice to make different 
 counters, counter1 and counter2.  Do they keep independent counts?
 */
+//TODO - Draw execution context for this code
 /**
  * @return {Function} counter function
  */

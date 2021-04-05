@@ -9,5 +9,5 @@ a.c = 100;
 console.log(a);
 
 
-d = [...a, b, ...c];
-console.log(d);
+// d = [...a, b, ...c];
+// console.log(d);
