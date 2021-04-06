@@ -55,73 +55,68 @@ that will encapsulate and return the bank object. Make the transactionsDB privat
 making it a local variable in the makeBank function instead of a property on the bank object.
 */
 
-function makeBank() {
-    const myBank = {
-        transactionDB: [],
+"use strict";
+/*eslint-disable */
+
+function makeAcount() {
+    const bank = {};
+
+    let transactionDB = [
+        { customerId: 1, customerTransactions: [10, 50, -40] }, // balance = 20
+        { customerId: 2, customerTransactions: [10, 10, -10] }, // balance = 10
+        { customerId: 3, customerTransactions: [5, -5, 55] }, // balance = 55
+    ];
+
+    bank.getBalance = function(id) {
+        const customer = transactionDB.find(c => c.customerId === id);
+        let balance = 0;
+        //console.log(customer);
+        //balance = customer.customerTransactions.reduce((acc,e)=>acc+e);
+        for (const trans of customer.customerTransactions) {
+            balance += trans;
+        }
+        return balance;
     };
-    return function() {
-        return myBank;
-    }
+
+    bank.debit = function(id, amount) {
+        let balance = this.getBalance(id);
+        if (amount < 0) {
+            console.log("Invalid amount. Please enter positive amount !");
+        } else if (amount > balance) {
+            console.log("Insufficient balance. Please try again !");
+        } else {
+            this.saveTransaction(id, amount);
+        }
+    };
+
+    bank.credit = function(id, amount) {
+        let balance = this.getBalance(id);
+        if (amount < 0) {
+            console.log("Invalid amount. Please enter positive amount !");
+        } else {
+            this.saveTransaction(id, amount);
+        }
+    };
+
+    bank.saveTransaction = function(id, amount) {
+        const customer = transactionDB.find(c => c.customerId === id);
+        customer.customerTransactions.push(amount);
+    };
+
+    bank.bankBalance = function() {
+        let totalBalance = 0;
+        for (const trans of transactionDB) {
+            totalBalance += this.getBalance(trans.customerId);
+        }
+        return totalBalance;
+    };
+    return bank;
 }
 
-const myBank = makeBank()();
-myBank.transactionDB = [
-    { custID: 1, custTrans: [10, 50, -40] }, // balance = 20
-    { custID: 2, custTrans: [10, 10, -10] }, // balance = 10
-    { custID: 3, custTrans: [5, -5, 55] }, // balance = 55
-];
+let banks = makeAcount();
+// console.log(transactionDB);
 
-myBank.checkId = function(id) {
-    const foundCustmr = myBank.transactionDB.find(customer => customer.custID === id);
-    return foundCustmr;
-};
-
-myBank.getBalance = function(id) {
-    const customer = this.checkId(id);
-    const balance = customer.custTrans.reduce((sum, item) => sum + item, 0);
-    return balance
-}
-
-myBank.saveTransaction = function(id, amount) {
-    const customer = this.checkId(id);
-    customer.custTrans.push(amount);
-}
-myBank.debit = function(id, amount) {
-    let balance = this.getBalance(id);
-    if (amount < 0) {
-        console.log("Invalid amount. Please enter positive amount !");
-    } else if (amount > balance) {
-        console.log("Insufficient balance. Please try again !");
-    } else {
-        amount = amount * -1;
-        balance += amount;
-        this.saveTransaction(id, amount);
-    }
-    return balance;
-}
-
-myBank.credit = function(id, amount) {
-    let balance = this.getBalance(id);
-    if (amount < 0) {
-        console.log("Invalid amount. Please enter positive amount !");
-    } else {
-        balance += amount;
-        this.saveTransaction(id, amount);
-    }
-    return balance;
-}
-myBank.totalBalance = function() {
-    const custArr = this.transactionDB;
-    let sum = 0;
-    for (const customer of custArr) {
-        const id = customer.custID;
-        const custBalance = this.getBalance(id);
-        sum += custBalance;
-    }
-    return sum;
-}
-
-console.log(`Total balance should be: ${myBank.totalBalance()}`);
-myBank.credit(1, 20);
-myBank.debit(1, 1000);
-console.log(`The total should now : ${myBank.totalBalance()}`);
+console.log("85", banks.bankBalance());
+banks.credit(1, 20); //40
+banks.debit(1, 50); //
+console.log("105", banks.bankBalance());

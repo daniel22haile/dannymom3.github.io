@@ -66,3 +66,10 @@ if (true) {
     }
 }
 sayHi();
+
+
+
+function tenClock() {
+    clearInterval(timerId);
+}
+setTimeout(tenClock, 10000);
