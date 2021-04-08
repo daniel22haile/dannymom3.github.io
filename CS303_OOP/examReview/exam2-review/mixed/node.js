@@ -49,3 +49,16 @@ let newNode = {
     next: node1
 }
 head.next = newNode;
+
+
+
+//TODO - Add a node with value 5 to the beginning of the list
+node1 = { value: 50, next: null };
+head = { value: 10, next: node1 };
+
+let newNode = {
+    value: 5,
+    next: head,
+}
+newNode.next = head;
+head = newNode;

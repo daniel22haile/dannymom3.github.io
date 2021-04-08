@@ -26,4 +26,4 @@ function textAdder(node) {
 textAdder(n1);
 console.log(n3);
 console.log(n2);
-console.log(n4);
+console.log(n5);

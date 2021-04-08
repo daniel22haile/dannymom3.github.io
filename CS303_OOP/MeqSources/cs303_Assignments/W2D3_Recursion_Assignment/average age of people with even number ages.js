@@ -19,20 +19,20 @@ let peopleArray2 = [
 let averAge = averageAge_of_evenNum(peopleArray2);
 console.log(averAge);
 
-////////////////////////////////////Test.
+//Test.
 
-describe("averageAgeOfEvenNum", function () {
+// describe("averageAgeOfEvenNum", function () {
 
-    it("returns the average age of people with even number ages", function () {
+//     it("returns the average age of people with even number ages", function () {
 
-        let peopleArray2 = [
-            { name: "Sam", age: 15 },
-            { name: "William", age: 20 },
-            { name: "Lucy", age: 30 },
-            { name: "Lucy", age: 100 }
-        ]
-        let averAge = averageAge_of_evenNum(peopleArray2);
+//         let peopleArray2 = [
+//             { name: "Sam", age: 15 },
+//             { name: "William", age: 20 },
+//             { name: "Lucy", age: 30 },
+//             { name: "Lucy", age: 100 }
+//         ]
+//         let averAge = averageAge_of_evenNum(peopleArray2);
 
-        assert.equal(averAge, 50);
-    });
-});
+//         assert.equal(averAge, 50);
+//     });
+// });

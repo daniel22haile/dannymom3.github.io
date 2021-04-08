@@ -15,4 +15,4 @@ function getYoungerAge(array) {
     return result;
 }
 console.log(getYoungerAge(people));
-//TODO - related, print the name of younger
+//TODO - related, print the name of younger??

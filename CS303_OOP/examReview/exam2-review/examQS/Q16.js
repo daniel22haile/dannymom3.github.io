@@ -1,21 +1,19 @@
 "use strict";
 
 function makeAccount() {
-    let count = 0;
-    return function(account, value) {
-        if (account === "add")
-            count += value;
-        if (account === "debit")
-            count -= value;
+    let balance = 0;
+    return function(op, amt) {
+        if (op === "add") {
+            balance += amt;
+        } else {
+            if (op === 'debit') {
+                balance -= amt;
+            }
+        }
+        return balance;
     }
-
-
 }
 const account1 = makeAccount();
-console.log(account1("add", 10));
-// account1("add", 10);
-// account1("add", 10);
-// account1("debit", 10);
-account1("debit", 10);
-
-// account1("add", 10);
+console.log(account1('add', 10)); //10
+console.log(account1('add', 10)); //20
+console.log(account1('debit', 4)); //16

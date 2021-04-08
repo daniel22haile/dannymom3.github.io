@@ -13,13 +13,10 @@ function Student(id, name) {
     }
 }
 
-
-
-
 //console.log(student.id);
 let student1 = new Student(1, "John");
 student1.display();
-//console.log(student1.age);
+console.log(student1.age);
 //console.log(student1.age);
 
 student1.displayName = function() {
@@ -28,8 +25,10 @@ student1.displayName = function() {
 
 //student1.displayName();
 let student2 = new Student(2, "Jim");
+student2.display();
 // console.log(student1);
 // console.log(student2);
 // 
 // console.log(student1);
-// console.log(student2);
+console.log(student2);
+console.log(student2.age);

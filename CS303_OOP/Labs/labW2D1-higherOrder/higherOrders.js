@@ -22,7 +22,7 @@ function myMap(arr, fun) {
 function mapped(value) {
     return value * 3
 }
-
+//TODO - Write your own version of find.
 // let input = [2, 3, 4, 6];
 // console.log(myMap(input, mapped)) //[6, 9, 12, 18]
 //TODO - Write your own version of filter.

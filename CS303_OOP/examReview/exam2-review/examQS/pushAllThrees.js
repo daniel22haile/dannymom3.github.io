@@ -4,22 +4,27 @@ let list = {
     next: {
         value: 2,
         next: {
-            value: 3,
-            next: null
+            value: 6,
+            next: {
+                value: 8,
+                next: {
+                    value: null
+                }
+            }
         }
     }
 };
 
-function getThrees(list) {
+function filterEvens(list) {
     let temp = list;
     let arr = [];
     while (temp) {
 
-        if (temp.value === 3) {
+        if (temp.value % 2 === 0) {
             arr.push(temp.value);
         }
         temp = temp.next;
     }
     return arr;
 }
-console.log(getThrees(list));
+console.log(filterEvens(list));

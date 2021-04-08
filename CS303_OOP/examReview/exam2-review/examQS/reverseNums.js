@@ -10,7 +10,7 @@ let list = {
     }
 };
 
-//using iteration
+//using iteration//
 
 function reverseNums(list) {
     let arr = [];

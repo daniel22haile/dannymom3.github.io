@@ -10,8 +10,7 @@ function printListRecursion(list) {
     printListRecursion(list.next);
 }
 
-//////////////////Using Loop.
-
+//Using Loop.
 function printListLoop(list) {
 
     while (list) {
@@ -35,6 +34,5 @@ let list1 = {
         }
     }
 };
-printListRecursion(list1);// 1,2,3,4
-printListLoop(list1);//1,2,3,4
-
+printListRecursion(list1); // 1,2,3,4
+printListLoop(list1); //1,2,3,4
