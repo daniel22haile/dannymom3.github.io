@@ -10,7 +10,7 @@ class Book {
 }
 
 
-/////////////////////////Library class
+//Library class
 class Library {
     constructor(books = [], members = []) {
         this.books = books;
@@ -25,8 +25,7 @@ class Library {
         this.members.push(newMember)
     }
 }
-
-///////////////////////////////Loan class
+//Loan class
 class Loan {
     constructor(book, dueDate) {
         this.book = book;
@@ -70,7 +69,7 @@ function totBookLoaned(member) {
 
 }
 
-//////////////////////////////Member class
+//Member class
 class Member {
     constructor(name = null) {
         this._name = name;
@@ -124,7 +123,7 @@ let loan2 = new Loan(theRoad, dueDate);
 
 
 let member = new Member("Mequanint Belay");
-let member1 = new Member("Sirak Sirak");
+let member1 = new Member("Daniel Haile");
 let member2 = new Member("Hamid Hamid");
 
 
@@ -140,15 +139,3 @@ library.addBook(trip);
 library.addMember(member);
 library.addMember(member1);
 library.addMember(member2);
-
-
-
-
-
-
-
-
-
-
-
-

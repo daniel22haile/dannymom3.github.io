@@ -15,7 +15,7 @@ let list = {
     }
 };
 
-function filterEvens(list) {
+function countTargetNodes(list) {
     let temp = list;
     let arr = [];
     while (temp) {
@@ -27,4 +27,4 @@ function filterEvens(list) {
     }
     return arr;
 }
-console.log(filterEvens(list));
+console.log(countTargetNodes(list));

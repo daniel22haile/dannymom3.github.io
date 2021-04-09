@@ -27,17 +27,17 @@
 
 
 //TODO - USING self pattern
-// let group = {
-//     title: "our group",
-//     students: ["John", "Pete", "Alice"],
-//     showList: function() {
-//         let self = this;
-//         this.students.forEach((student) => {
-//             console.log(self.title + ": " + student)
-//         })
-//     }
-// }
-// group.showList();
+let group = {
+    title: "our group",
+    students: ["John", "Pete", "Alice"],
+    showList: function() {
+        let self = this;
+        this.students.forEach((student) => {
+            console.log(self.title + ": " + student)
+        })
+    }
+}
+group.showList();
 
 
 //TODO - USING call
