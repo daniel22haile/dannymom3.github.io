@@ -7,8 +7,8 @@ let timer;
 let numberOfPlayers = 2;
 let currentPlayer = 0;
 let move = 0;
-let points1 = 0;    // player 1 points
-let points2 = 0;    // player 2 points
+let points1 = 0; // player 1 points
+let points2 = 0; // player 2 points
 let size = 4;
 
 /**
@@ -25,7 +25,7 @@ function drawBoard() {
     for (let s = 0; s < 4; s++) { // The variable s needs to be declared before using it
         let row = document.createElement("tr");
 
-        for (let r = 0; r < 4; r++) {// The variable r needs to be declared before using it
+        for (let r = 0; r < 4; r++) { // The variable r needs to be declared before using it
             let col = document.createElement("td");
             col.id = counter;
 
@@ -34,19 +34,17 @@ function drawBoard() {
              * @param {*} e event handler.
              * @returns {*} undefined
              */
-            let handler = function (e) {
+            let handler = function(e) {
                 if (currentPlayer == 0) {
                     this.innerHTML = "X";
                     player1Selections.push(parseInt(this.id));
-                    player1Selections.sort(function (a, b) { return a - b; });
+                    player1Selections.sort(function(a, b) { return a - b; });
                     d("player1").classList.remove("selected");
                     d("player2").classList.add("selected");
-                }
-
-                else {
+                } else {
                     this.innerHTML = "O";
                     player2Selections.push(parseInt(this.id));
-                    player2Selections.sort(function (a, b) { return a - b; });
+                    player2Selections.sort(function(a, b) { return a - b; });
                     d("player1").classList.add("selected");
                     d("player2").classList.remove("selected");
                 }
@@ -62,13 +60,10 @@ function drawBoard() {
 
                     reset();
                     drawBoard();
-                }
-
-                else if (player2Selections.length + player1Selections.length == 16) {
+                } else if (player2Selections.length + player1Selections.length == 16) {
                     reset();
                     drawBoard();
-                }
-                else {
+                } else {
                     if (currentPlayer == 0)
                         currentPlayer = 1;
                     else
@@ -143,17 +138,17 @@ function checkWinner() {
     if (playerSelections.length >= size) {
         // check if any 'winners' are also in your selections
 
-        for (let i = 0; i < winners.length; i++) {// The variable i needs to be declared before using it
-            let sets = winners[i];  // winning hand
+        for (let i = 0; i < winners.length; i++) { // The variable i needs to be declared before using it
+            let sets = winners[i]; // winning hand
             let setFound = true;
 
-            for (let r = 0; r < sets.length; r++) {// The variable r needs to be declared before using it
+            for (let r = 0; r < sets.length; r++) { // The variable r needs to be declared before using it
                 // check if number is in current players hand
                 // if not, break, not winner
                 let found = false;
 
                 // players hand
-                for (let s = 0; s < playerSelections.length; s++) {// The variable s needs to be declared before using it.
+                for (let s = 0; s < playerSelections.length; s++) { // The variable s needs to be declared before using it.
                     if (sets[r] == playerSelections[s]) {
                         found = true;
                         break;
