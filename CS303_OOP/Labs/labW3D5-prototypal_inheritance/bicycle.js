@@ -1,5 +1,5 @@
 //https://www.geeksforgeeks.org/inheritance-in-java/  
-
+module.exports = { applyBrake, speedUp };
 const Bicycle = {
 
     speed: 0,
