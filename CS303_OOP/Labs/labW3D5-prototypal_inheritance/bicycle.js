@@ -1,39 +1,30 @@
 //https://www.geeksforgeeks.org/inheritance-in-java/  
-// Java program to illustrate the
-// concept of inheritance
 
-// base class
 const Bicycle = {
 
-    // gear: gear,
-    // speed: speed,
+    speed: 0,
 
     applyBrake(decrement) {
-        return this.speed -= this.decrement;
+        return this.speed -= decrement;
     },
 
     speedUp(increment) {
-        return this.speed += this.increment;
+        return this.speed += increment;
     }
 };
 
 
-Bicycle.prototype.MountainBike = function(seatHeight, gear, speed) {
-    this.seatHeight = seatHeight;
-    this.gear = gear;
-    this.speed = speed;
 
+let MountainBike = {
+    seatHeight: 3,
+    gear: 3
+        // __proto__:Bicycle
 }
+MountainBike.__proto__ = Bicycle;
+console.log(`speed of bike is ${MountainBike.speedUp(100)}`);
+//console.log(MountainBike.speed); //After speed up with 100
+console.log(`Speed of bike fter apply break decrease by 9 is ${MountainBike.applyBrake(9)}`); //After apply break and decrease the speed by 9
+//console.log(MountainBike.speed);
 
-
-const mBike = new MountainBike(4, 3, 100);
-console.log(mBike.applyBrake());
-
-MountainBike.applyBrake();
-// overriding toString() method
-// of Bicycle to print more info
-// let mountainBike = function() {
-//     return ("No of gears are " + gear + "\n" +
-//         "speed of bicycle is " + speed + "\nseat height is " + seatHeight);
-
-// }
+console.log(`seat height is ${MountainBike.seatHeight}`);
+console.log(`Number of gears for mountain bike is ${MountainBike.gear}`)
