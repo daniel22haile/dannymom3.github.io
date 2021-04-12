@@ -33,3 +33,5 @@ console.log(pockets.pen);
 console.log(pockets.money);
 
 console.log(pockets.glasses);
+
+//TODO - #2 There is no difference

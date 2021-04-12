@@ -64,7 +64,7 @@ describe("teach", function() {
 
         let teacher = new Teacher();
 
-        assert.deepEqual(teacher.initialize("Daniel", 90), teacher.teach("class"), "Mequanint is now teaching class");
+        assert.deepEqual(teacher.initialize("Daniel", 90), teacher.teach("class"), "Daniel is now teaching class");
     });
 
 });

@@ -22,6 +22,10 @@ console.log("expect 3: ", pockets.pen);
 console.log("expect 1: ", bed.glasses);
 console.log(head.pen);
 
+
+/*
+TODO - Using Object.create()
+*/
 let head = {
     glasses: 1
 };

@@ -9,16 +9,19 @@ let hamster = {
 };
 
 
-let speedy = {
-    __proto__: hamster,
-    //stomach: [] //TODO - SOLUTION
-};
+// let speedy = {
+//     __proto__: hamster,
+//stomach: [] //TODO - SOLUTION
+// };
+//TODO - OR
+let speedy = Object.create(hamster);
 
-let lazy = {
-    // stomach: [], //TODO -- SOLUTION
-    __proto__: hamster
-};
-
+// let lazy = {
+// stomach: [], //TODO -- SOLUTION
+//     __proto__: hamster
+// };
+//todo - OR
+let lazy = Object.create(hamster);
 // This one found the food
 speedy.eat("apple");
 console.log(speedy.stomach); // apple

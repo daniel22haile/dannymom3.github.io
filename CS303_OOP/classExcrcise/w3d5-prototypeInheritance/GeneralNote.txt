@@ -1,0 +1,17 @@
+
+#primitives on native prototypes
+
+==>Values null and undefined have no object wrappers
+     Special values null and undefined stand apart. 
+     They have no object wrappers, so methods and properties are not available for them. 
+     And there are no corresponding prototypes either.
+
+
+#Changing native prototypes
+Native prototypes can be modified. For instance, if we add a method to String.prototype, it becomes available to all strings:
+
+String.prototype.show = function() {
+  alert(this);
+};
+
+"BOOM!".show(); // BOOM!
