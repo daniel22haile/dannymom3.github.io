@@ -1,23 +1,22 @@
-"use strict";
+// "use strict";
 
-class CoffeeMachine {
-    waterLimit = 200;
+// class CoffeeMachine {
+//     #waterLimit = 200;
 
 
-    #
-    fixWaterAmount(value) {
-        if (value < 0) return 0;
-        if (value > this.#waterLimit) return this.#waterLimit;
-    }
+//     #fixWaterAmount(value) {
+//         if (value < 0) return 0;
+//         if (value > this.#waterLimit) return this.#waterLimit;
+//     }
 
-    setWaterAmount(value) {
-        this.#waterLimit = this.#fixWaterAmount(value);
-    }
+//     setWaterAmount(value) {
+//         this.#waterLimit = this.#fixWaterAmount(value);
+//     }
 
-}
+// }
 
-let coffeeMachine = new CoffeeMachine();
+// let coffeeMachine = new CoffeeMachine();
 
-// can't access privates from outside of the class
-coffeeMachine.#fixWaterAmount(123); // Error
-coffeeMachine.#waterLimit = 1000; // Error
+// // can't access privates from outside of the class
+// coffeeMachine.#fixWaterAmount(123); // Error
+// coffeeMachine.#waterLimit = 1000; // Error

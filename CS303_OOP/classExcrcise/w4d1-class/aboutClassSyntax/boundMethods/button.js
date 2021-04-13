@@ -14,7 +14,7 @@ class Button {
     }
 
     click() {
-        alert(this.value);
+        console.log(this.value);
     }
 }
 
