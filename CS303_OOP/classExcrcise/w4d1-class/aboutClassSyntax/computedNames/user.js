@@ -10,5 +10,4 @@ class User {
     }
 
 }
-
 new User().sayHi();

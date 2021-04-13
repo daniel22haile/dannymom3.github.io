@@ -33,29 +33,20 @@ class Clock {
         this.timer = setInterval(() => this.render(), 1000);
     }
 }
-
-
 class ExtendedClock extends Clock {
-    constructor(template, precision = 1000) {
-        super(template);
-
-        this._precision = precision;
-    }
-
-    set precision(valueNew) {
-        this._precision = valueNew;
-    }
-    get precision() {
-        return this._precision;
+    constructor(options) {
+        super(options);
+        let { precision = 1000 } = options;
+        this.precision = precision;
     }
 
     start() {
         this.render();
-        this.timer = setInterval(() => this.render(), this._precision);
+        this.timer = setInterval(() => this.render(), this.precision);
     }
-}
+};
 
 let myClock = new ExtendedClock('h:m:s', 2000);
 
 myClock.start();
-myClock.stop();
+// myClock.stop();

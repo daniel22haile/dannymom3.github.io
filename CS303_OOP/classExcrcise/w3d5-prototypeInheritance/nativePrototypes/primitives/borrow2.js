@@ -7,10 +7,12 @@ function showArgs() {
 }
 showArgs("John", "Pete", "Alice"); // John - Pete - Alice
 
-//Because join resides in Array.prototype, we can call it from there directly and rewrite it as:
+//Because join resides in Array.prototype, we can call it from 
+//there directly and rewrite it as:
 
 function showArgs() {
     console.log(Array.prototype.join.call(arguments, " - "));
 }
 
-//That's more efficient, because it avoids the creation of an extra array object []. On the other hand, it is longer to write.
+//That's more efficient, because it avoids the creation of an extra 
+//array object []. On the other hand, it is longer to write.
