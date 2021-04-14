@@ -26,9 +26,11 @@ quiz.key = [{ qid: 1, ans: "b" }, { qid: 2, ans: "a" }, { qid: 3, ans: "b" }];
  * @param {Object} ans1 is an answer object
  * @param {Object} ans2 is an answer object 
  * @returns {number} difference of the identifiers
+ * TODO - check this one
  */
 function answerComparator(ans1, ans2) {
     //IMPLEMENT THIS
+    return ans1.quiz.students.answers - ans2.quiz.students.answers;
 }
 
 /**
@@ -41,6 +43,13 @@ function answerComparator(ans1, ans2) {
  */
 quiz.scoreStudent = function(sid) {
     //IMPLEMENT THIS
+    const student = this.students.filter(s => s.sid === studentId)[0];
+    return student.answers.reduce((sum, currentQuestion) => {
+        if (currentQuestion.checkAnswer(this.questions.get(currentQuestion.qid))) {
+            sum = sum + 1;
+        }
+        return sum;
+    }, 0);
 };
 
 /**
@@ -49,6 +58,9 @@ quiz.scoreStudent = function(sid) {
  */
 quiz.getAverage = function() {
     //IMPLEMENT THIS
+    return this.students.reduce((accmulator, student, index, array) => {
+        return accmulator + this.scoreStudentBySid(student.sid) / array.length;
+    }, 0);
 
 };
 
