@@ -13,4 +13,16 @@ module.exports = { Accumulator }; //add all of your function names here that you
 function Accumulator(initialValue, increment) {
 
     //IMPLEMENT THIS
+
+    this.initialValue = initialValue;
+
+    this.read = function() {
+        this.initialValue += increment;
+    };
 }
+
+let accumulator = new Accumulator(0, 3);
+accumulator.read();
+accumulator.read();
+
+console.log(accumulator.initialValue);
