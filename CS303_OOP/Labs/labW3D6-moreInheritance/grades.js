@@ -43,7 +43,7 @@ function answerComparator(ans1, ans2) {
  */
 quiz.scoreStudent = function(sid) {
     //IMPLEMENT THIS
-    const student = this.students.filter(s => s.sid === studentId)[0];
+    const student = this.students.filter(s => s.sid === sid)[0];
     return student.answers.reduce((sum, currentQuestion) => {
         if (currentQuestion.checkAnswer(this.questions.get(currentQuestion.qid))) {
             sum = sum + 1;
