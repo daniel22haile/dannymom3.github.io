@@ -1,6 +1,12 @@
 "use strict";
 /*eslint-disable*/
-const abc = { a: 1, b: 2, add: function() { console.log("1+2 = 3?", this.a + this.b); } }
+const abc = {
+    a: 1,
+    b: 2,
+    add: function() {
+        console.log("1+2 = 3?", this.a + this.b);
+    }
+}
 abc.add(); //works 
 setTimeout(abc.add, 2000); //problem!
 

@@ -59,7 +59,7 @@ quiz.scoreStudent = function(sid) {
 quiz.getAverage = function() {
     //IMPLEMENT THIS
     return this.students.reduce((accmulator, student, index, array) => {
-        return accmulator + this.scoreStudentBySid(student.sid) / array.length;
+        return accmulator + this.scoreStudentBySid(student.sid) / quiz.students.length;
     }, 0);
 
 };
