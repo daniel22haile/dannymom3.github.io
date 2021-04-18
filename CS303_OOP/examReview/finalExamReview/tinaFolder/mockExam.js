@@ -97,7 +97,8 @@ Feedback:
 
 // What are the two ways to create an empty object?
 // NOTE: In the real exam, for this type of short answer questions, they are 
-//only based on lectures 10 inheritance & 11 classes. I may ask you to read a piece of code, and there are some problems, will ask you to fix it.
+//only based on lectures 10 inheritance & 11 classes. I may ask you to read a piece of code, and 
+//there are some problems, will ask you to fix it.
 
 Feedback:
     let obj1 = {};
@@ -119,7 +120,8 @@ let obj2 = new Object();
 
 // Question 6 of 9
 
-// In the built-in String constructor function, there is no reverse method. The requirement is to add a reverse method which is available for every String Object.
+// In the built-in String constructor function, there is no reverse method. 
+//The requirement is to add a reverse method which is available for every String Object.
 
 // The reverse method is to reverse each characters in the String object, and return a reversed String.
 

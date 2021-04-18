@@ -109,20 +109,30 @@ function libraryId() {
     document.getElementById("displayArea").innerHTML = libraryID;
 }
 
+
+// /* scramble -- meaning put something mixup and put together */
+// function scramble() {
+//     /*get all the titles */
+//     const allTitles = findTitles();
+// /*put all of the words into an array */
+// /* find all words of different lengths and put into each into own array  --> array of arrays*/
+// /* join each array back into a string --> array of strings */
+// const wordStringArray = null; //array holding concatenated strings of n letter words
+// /* join the array of strings into a single string with \n line breaks */
+//     const scrambleString = wordStringArray.join("\n");
+//     /* display in the text area */
 /**
- * Event handler to display library titles scrambled by word size
- * @returns {}
+ * 
+ * @param {string} title is book title
+ * @returns {string}
  */
-/* scramble -- meaning put something mixup and put together */
 function scramble() {
-    /*get all the titles */
-    const allTitles = findTitles();
-    /*put all of the words into an array */
-    /* find all words of different lengths and put into each into own array  --> array of arrays*/
-    /* join each array back into a string --> array of strings */
-    const wordStringArray = null; //array holding concatenated strings of n letter words
-    /* join the array of strings into a single string with \n line breaks */
-    const scrambleString = wordStringArray.join("\n");
-    /* display in the text area */
-    textArea.innerHTML = scrambleString;
+    const title = findTitles();
+    let titleLen = title.toString().split(" ");
+    let sortedTitle = titleLen.sort((a, b) => a.length - b.length)
+    console.log(sortedTitle)
+    const titleString = titleLen.join("\n");
+    let textArea = document.getElementById("displayArea");
+    textArea.innerHTML = titleString;
 }
+//console.log(scramble())
