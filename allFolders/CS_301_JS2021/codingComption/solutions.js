@@ -5,6 +5,8 @@
  * @param {number} num number
  * @returns {}
  */
+
+
 function divisibleSumPairs(arr, num) {
     let countPair = 0;
     for (let i = 0; i < arr.length; i++) {
