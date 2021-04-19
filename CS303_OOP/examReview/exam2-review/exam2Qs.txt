@@ -1,4 +1,0 @@
-#Exam 2
-Q4. Arrow functions are best characterized as --------------- function expression
-Q2. Function declarations can be used before or after they appear in the file. TRUE
-Q3. Function expressions can not be used before or after they appear in the file. True
