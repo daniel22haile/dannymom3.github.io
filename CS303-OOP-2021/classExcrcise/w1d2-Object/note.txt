@@ -1,0 +1,24 @@
+
+In JavaScript, a method is:
+            => a function that belongs to an object or stored in the object properties.
+            => an action that can be performed on objects 
+
+Everything in JavaScript is an object 
+            => a function is an object 
+            => an Array is an object.
+
+When we write our code using objects to represent entities, that’s called object-oriented programming, 
+in short: “OOP”.
+
+Functions and methods are the same in JavaScript, but a method is a function, which 
+is a property of an object.
+
+
+functions are methods in Javascript. There is no difference. 
+Essentially the answer is NO, not all functions are methods in JavaScript. 
+In the above example, add is a function and since it belongs to myMathObject , that
+ makes it also a method.
+
+
+
+ 

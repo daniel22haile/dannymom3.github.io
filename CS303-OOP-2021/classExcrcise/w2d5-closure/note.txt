@@ -1,0 +1,9 @@
+
+A closure is the combination of a function bundled together (enclosed) with 
+references to its surrounding state (the lexical environment). 
+In other words, a closure gives you access to an outer function's scope from an inner function.
+
+In JavaScript, closures are the primary mechanism used to enable data privacy. 
+When you use closures for data privacy, the enclosed variables are only in scope within the 
+containing (outer) function. You can't get at the data from an outside scope except 
+through the object's privileged methods.
