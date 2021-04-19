@@ -1,0 +1,16 @@
+
+
+part1 - RECURSION
+
+==> One function call has exactly one execution context associated with it.
+
+==> When a function makes a nested call, the following happens:
+
+    - The current function is paused.
+    - The execution context associated with it is remembered in a special data structure called execution context stack.
+    - The nested call executes.
+    - After it ends, the old execution context is retrieved from the stack, and the outer function is resumed from where it stopped.
+Example:
+     - Exacution context of power for line 1 is
+                
+                    Context: { x: 2, n: 3, at line 1 } pow(2, 3)

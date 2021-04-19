@@ -1,0 +1,5 @@
+
+Compile-time and Runtime are the two programming terms used in the software development.
+       ==> Compile-time is the time at which the source code is converted into
+                        an executable code
+       ==> Runtime is the time at which the executable code is started running.

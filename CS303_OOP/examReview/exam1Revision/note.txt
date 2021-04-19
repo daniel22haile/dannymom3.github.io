@@ -1,0 +1,9 @@
+slice() - return the copy of the elements
+
+        - doesn't change the original array, i.e not destructive
+        - the length of the array still the same as the original 
+        - doesn't include the last element of the array
+
+splice() - returns the removed items 
+         - change the original array i.e destructive method
+         - included the lats element of the array
