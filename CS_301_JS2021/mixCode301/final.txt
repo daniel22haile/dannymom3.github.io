@@ -1,0 +1,76 @@
+prefix
+suffix
+swaping
+primitive and object copy and swapping
+
+
+Q1. Write a JavaScript function isSumOfPrimesEven that takes an 
+array of positive integers as an argument and returns true 
+if the sum of all the prime elements in the given array is even 
+otherwise returns false. If the array is empty or if the array does not contain 
+any prime element it should return false.
+
+- isSumOfPrimesIndicesEven ????
+
+Q3.An array is called a perfectly odd array if every element at the odd indices of the array is also odd. Write a function named isPerfectlyOdd that takes an array of integers as a parameter and checks whether it is perfectly odd. Return false if the array is an empty array.
+Write a function that given an array of integers returns the sum of elements at the prime indices. For e.g. for an array [1,5,6,7,8,3] result would be a sum of 6+7+3=16 which are values at the prime indices of the array.
+Write a function that takes a string parameter and returns the middle character of the string. If string is of even length then function should return the middle two characters.
+
+
+
+Q. output
+let ob1 = {id:123};
+let ob2 = {id:123}
+let ob3 = ob2;
+let x;
+if(ob1===ob2){
+    x = 5;
+}else if(ob1===ob3){
+    x = 7;
+}else{
+    x =10;
+}
+console.log(x); // Output? __10____
+
+
+let ob1 = {id:123};
+let ob2 = {id:123}
+let ob3 = ob2;
+let x;
+if(ob1===ob2){
+    x = 5;
+}else if(ob1===ob3){
+    x = 7;
+}else{
+    x =10;
+}
+ let x = 13;
+console.log(x); // Output? __13____
+
+
+
+let x = 5;
+ 
+function double(x){
+    x = x*2;
+}
+ 
+double(x);
+ 
+console.log(x) //Output?_____
+
+
+
+let x = 5;
+ 
+function double(x){
+    x = x*2;
+    console.log(x)
+}
+ 
+double(x);
+ 
+console.log(x) //Output?_____
+
+
+# distinct vs duplicate element of the array
