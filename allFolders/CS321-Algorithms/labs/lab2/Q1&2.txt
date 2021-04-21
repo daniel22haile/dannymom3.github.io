@@ -1,0 +1,21 @@
+#1. In the SelectionSortdiscussed in class,
+
+     a. the largest keys accumulate on the left (low indices). 
+     b. a minimum key is repeatedly discovered. 
+     c. a number of items must be shifted to insert each item in its correctly sorted position.
+     d. the sorted items accumulate on the right
+
+     answer: b
+
+#2. In the InsertionSort, after an item is inserted in the partially sorted group, it will 
+    a. never be moved again.
+    b. never be shifted to the left.
+    c. often be moved out of this group.
+    d. find that its group is steadily shrinking.
+
+    answer: b
+
+
+
+#4. Design an algorithm Merge to solve this problem and write your algorithm 
+    description using the pseudo-code syntax.
