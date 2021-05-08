@@ -23,6 +23,7 @@ class ArraySorter {
             }
         }
         console.log(res + "]");
+
     }
     _swapElements(arr, j, k) {
         let temp = arr[j];
@@ -36,21 +37,19 @@ class ArraySorter {
         this._shiftCount = 0;
         this._swapCount = 0;
         this._insertionSort(arr, 0, arr.length - 1);
+        return arr;
     }
     selectionSort(arr) {
         let n = arr.length;
-        let count = 0;
+
         for (let i = 0; i < n; i++) {
             let temp = arr[i];
             let j = i;
             for (let k = i + 1; k < n; k++) {
-                this._compCount++;
                 if (arr[k] < temp) {
                     temp = arr[k];
                     j = k;
                     this._swapElements(arr, j, i)
-
-                    this._shiftCount++;
 
                 }
             }
@@ -87,13 +86,10 @@ class ArraySorter {
             arr[k] = temp; // place in sorted position    
         }
     }
+
 }
-
-
-
 
 let arr = [3, 8, 4, 7, 9, 1]
 let check = new ArraySorter();
 console.log(check.selectionSort(arr))
 console.log(check.bubbleSort(arr))
-console.log(check._insertionSort(arr))

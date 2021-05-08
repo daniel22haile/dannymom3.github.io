@@ -1,0 +1,7 @@
+Q1. Pseudocode for reverse order ... bubble
+Q2. Explain the possible improvements of bubblesort?
+Q3. Does selection sort has any improvement like bubble sorrt and insertion sort?
+
+Q4. When QuickSelect runs on input array S = [1, 3, 5, 2, 1, 7, 2, 1, 4, 1], with k = 3, the 
+return value is 1. //true
+
