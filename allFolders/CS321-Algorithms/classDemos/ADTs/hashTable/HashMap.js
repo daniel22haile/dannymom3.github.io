@@ -1,68 +1,68 @@
-const List = require('../Container/DLinkedList.js');
+const List = require('../../ADTs/Lists/dLinkedList');
 const Pair = require('./Item.js');
 
 class HashMap {
     constructor() {
-      this._table = [];
-      this._size = 0; //no. elements in the table
-      this._numChains = 2; //size of the table
-      for (let i=0; i< this._numChains; i++) {
-          this._table[i] = new List.DLinkedList();
-      }
+        this._table = [];
+        this._size = 0; //number of elements in the table
+        this._numChains = 2; //size of the table
+        for (let i = 0; i < this._numChains; i++) {
+            this._table[i] = new List.DLinkedList();
+        }
     }
-  
-    contains(key){
-        if(this.get(key) != null)
+
+    contains(key) {
+        if (this.get(key) != null)
             return true;
         else
             return false;
     }
     put(key, value) {
-      this._size++;
-      const bucketIndex = this._getIndex(key);
-      const list = this._table[bucketIndex];
+        this._size++;
+        const bucketIndex = this._getIndex(key);
+        const list = this._table[bucketIndex];
 
-      const item = new Pair.Item(key, value);
-      
-      //update the value for an existing key
-      let iter = list.positions();
-      while(iter.hasNext()){
-          let pos = iter.nextObject();
-          let ele = pos.element();//each element is an Item(key, value)
-          if(ele.key() == key){
-            list.replaceElement(pos, item);
-            return;
-          }
-      }
-      //insert(key, value) when no such key in the table
-      list.insertFirst(item);
-      
+        const item = new Pair.Item(key, value);
+
+        //update the value for an existing key
+        let iter = list.positions();
+        while (iter.hasNext()) {
+            let pos = iter.nextObject();
+            let ele = pos.element(); //each element is an Item(key, value)
+            if (ele.key() == key) {
+                list.replaceElement(pos, item);
+                return;
+            }
+        }
+        //insert(key, value) when no such key in the table
+        list.insertFirst(item);
+
     }
-  
+
     get(key) {
-      //bucketIndex is hashvalue for key
-      const bucketIndex = this._getIndex(key);
-      const list = this._table[bucketIndex];
-      let iter = list.elements();
-      while(iter.hasNext()){
-          let ele = iter.nextObject(); //each element is an Item(key, value)
-          if(ele.key() == key)
-            return ele.value();
-      }
-      return null;
+        //bucketIndex is hashvalue for key
+        const bucketIndex = this._getIndex(key);
+        const list = this._table[bucketIndex];
+        let iter = list.elements();
+        while (iter.hasNext()) {
+            let ele = iter.nextObject(); //each element is an Item(key, value)
+            if (ele.key() == key)
+                return ele.value();
+        }
+        return null;
     }
 
     remove(key) {
         const bucketIndex = this._getIndex(key);
         const list = this._table[bucketIndex];
         let iter = list.positions();
-        while(iter.hasNext()){
+        while (iter.hasNext()) {
             let pos = iter.nextObject();
             let ele = pos.element(); //each element is an Item(key, value)
-            if(ele.key() == key){
-              this._size--;
-              list.remove(pos);
-              return ele.value();
+            if (ele.key() == key) {
+                this._size--;
+                list.remove(pos);
+                return ele.value();
             }
         }
         return null;
@@ -70,12 +70,12 @@ class HashMap {
 
     _keysOrValues(option) { //when i=0 return keys otherwise return values
         let returnList = new List.DLinkedList();
-        for (let i=0; i<this._table.length; i++) {
+        for (let i = 0; i < this._table.length; i++) {
             let list = this._table[i];
             let iter = list.elements();
-            while(iter.hasNext()){
+            while (iter.hasNext()) {
                 let item = iter.nextObject();
-                if(option == 0)
+                if (option == 0)
                     returnList.insertLast(item.key());
                 else
                     returnList.insertLast(item.value());
@@ -83,7 +83,7 @@ class HashMap {
         }
         return returnList;
     }
-    keys(){
+    keys() {
         return this._keysOrValues(0);
     }
     values() {
@@ -91,8 +91,8 @@ class HashMap {
     }
     toString() {
         let str = "{";
-        for (let i=0; i<this._table.length; i++) {
-            if(!this._table[i].isEmpty())
+        for (let i = 0; i < this._table.length; i++) {
+            if (!this._table[i].isEmpty())
                 str += this._table[i].toString();
         }
         str += "}";
@@ -106,7 +106,7 @@ class HashMap {
     }
     isEmpty() {
         return this._size == 0;
-    }  
+    }
     _hash(key) {
         let hashcode = 0;
         const stringTypeKey = key.toString();
@@ -117,10 +117,10 @@ class HashMap {
         return hashcode;
     }
     _getIndex(key) {
-      const hashcode = this._hash(key);
-      const index = hashcode % this._table.length;
-      return index;
-    }    
-  }
+        const hashcode = this._hash(key);
+        const index = hashcode % this._table.length;
+        return index;
+    }
+}
 
-  exports.HashMap = HashMap;
+exports.HashMap = HashMap;

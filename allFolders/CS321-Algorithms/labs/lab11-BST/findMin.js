@@ -26,7 +26,19 @@ function findMinHelper(T, r) {​​​​​   
 
    
 console.log(findMin(bs))
-    //TODO ---- ???
+    //TODO ---- findMin
+
+
+
+function findMin(T) {
+    if (T.root() === null) return null;
+    return minHelper(T, T.root());
+}
+
+function minHelper(T, current) {
+    if (T.leftChild(current) === null) return current.element();
+    return minHelper(T, T.leftChild(current));
+}
 
 
 function inOrder(T) {​​​​​

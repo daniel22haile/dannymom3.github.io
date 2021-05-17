@@ -1,4 +1,4 @@
-const Pair = require('../Dictionary/Item.js');
+//const Pair = require('../Dictionary/Item.js');
 const Tree = require('./BinaryTree.js');
 const Iter = require('./BinaryTreeIterator.js');
 
@@ -29,8 +29,8 @@ class BinarySearchTree extends Tree.BinaryTree {
             } else {
                 return this._findPosition(k, p._right);
             }
-        } else {  // key k is in position p
-            return p;  
+        } else { // key k is in position p
+            return p;
         }
     }
     insertItem(k, e) {
@@ -46,7 +46,7 @@ class BinarySearchTree extends Tree.BinaryTree {
                 let newItem = new Pair.Item(k, e);
                 if (diff < 0) {
                     return this.insertLeft(p, newItem);
-                } else { 
+                } else {
                     return this.insertRight(p, newItem);
                 }
             }
