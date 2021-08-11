@@ -1,2 +1,0 @@
-Q2.List 5 reserved keywords in javaScript?
-ANSWER: let, function, break, const, continue

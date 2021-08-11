@@ -1,6 +1,0 @@
-
-=>The use of tail call recursion
-The performance of this iterative function is equivalent to its 
-recursive function. In other words, tail call optimization means 
-that it is possible to call a function from another function without 
-growing the call stack.

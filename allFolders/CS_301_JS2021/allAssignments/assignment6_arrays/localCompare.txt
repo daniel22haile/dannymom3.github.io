@@ -1,2 +1,0 @@
-
-Q. What is localeComparemethod for Strings? Why is it needed?
